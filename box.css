@@ -1,0 +1,100 @@
+.box > div {
+  height: 100%;
+}
+.box.full {
+  height: 100%;
+}
+
+.cen {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.cen.full {
+  height: 100%;
+}
+
+.grow {
+  flex-grow: 1;
+}
+
+.shrink {
+  flex-shrink: 1;
+}
+
+.expand {
+  flex-grow: 99999;
+}
+
+.ver {
+  display: flex;
+  flex-direction: column;
+}
+.ver.full {
+  height: 100%;
+}
+.ver.top {
+  justify-content: flex-start;
+}
+.ver.bottom {
+  justify-content: flex-end;
+}
+.ver.center {
+  align-items: center;
+}
+.ver.left {
+  align-items: flex-start;
+}
+.ver.right {
+  align-items: flex-start;
+}
+.ver.middle {
+  justify-content: center;
+}
+.ver.space {
+  justify-content: space-between;
+}
+.ver.around {
+  justify-content: space-around;
+}
+.ver.evenly {
+  justify-content: space-evenly;
+}
+
+.hor {
+  display: flex;
+  flex-direction: row;
+}
+.hor.top {
+  align-items: flex-start;
+}
+.hor.bottom {
+  align-items: flex-end;
+}
+.hor.center {
+  align-items: center;
+}
+.hor.left {
+  justify-content: flex-start;
+}
+.hor.right {
+  justify-content: flex-end;
+}
+.hor.middle {
+  justify-content: center;
+}
+.hor.space {
+  justify-content: space-between;
+}
+.hor.around {
+  justify-content: space-around;
+}
+.hor.evenly {
+  justify-content: space-evenly;
+}
+.hor.wrap {
+  flex-wrap: wrap;
+}
+.hor.full {
+  height: 100%;
+}

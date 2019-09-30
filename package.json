@@ -1,0 +1,49 @@
+{
+  "name": "@berhalak/vue-layout",
+  "version": "0.0.1",
+  "description": "vue layout components",
+  "main": "dist/vue-layout.umd.js",
+  "types": "src/index.d.ts",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/berhalak/vue-layout.git"
+  },
+  "keywords": [
+    "vue",
+    "vue-component",
+    "flexbox",
+    "grid",
+    "responsive",
+    "layout",
+    "components"
+  ],
+  "author": "berhalak",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/berhalak/vue-layout/issues"
+  },
+  "homepage": "https://github.com/berhalak/vue-layout#readme",
+  "scripts": {
+    "serve": "vue-cli-service serve",
+    "build": "vue-cli-service build --target lib --name vue-layout ./src/index.ts",
+    "deploy": "npm run build && npm publish"
+  },
+  "devDependencies": {
+    "vue": "^2.6.10",
+    "@vue/cli-plugin-typescript": "^3.11.0",
+    "@vue/cli-service": "^3.11.0",
+    "node-sass": "^4.9.0",
+    "sass-loader": "^7.1.0",
+    "typescript": "^3.4.3",
+    "vue-template-compiler": "^2.6.10"
+  },
+  "postcss": {
+    "plugins": {
+      "autoprefixer": {}
+    }
+  },
+  "browserslist": [
+    "> 1%",
+    "last 2 versions"
+  ]
+}
