@@ -1,16 +1,16 @@
 <template>
 	<div>
 		<div style="height: 100px; border: 1px solid black">
-			<hor full>
-				<box size="200px" grow>
+			<v-hor full>
+				<v-box size="200px" grow>
 					<div style="background: red">img</div>
-				</box>
-				<box size="300px" expand>
-					<cen>
+				</v-box>
+				<v-box size="300px" expand>
+					<v-cen>
 						<span>text</span>
-					</cen>
-				</box>
-			</hor>
+					</v-cen>
+				</v-box>
+			</v-hor>
 		</div>
 		<div style="height: 100px; border: 1px solid black">
 			<cols full sm="200px 1fr">

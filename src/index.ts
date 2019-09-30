@@ -25,7 +25,7 @@ export default {
 			prefix = options;
 		}
 		for (let key in components) {
-			vue.component(prefix + key, (components as any)[key]);
+			vue.component(prefix + key.toLowerCase(), (components as any)[key]);
 		}
 	},
 	...components
