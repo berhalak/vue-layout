@@ -5,6 +5,7 @@ import Box from "./components/Box.vue";
 import Cen from "./components/Cen.vue";
 import Hor from "./components/Hor.vue";
 import Ver from "./components/Ver.vue";
+import Breakpoint from "./components/Breakpoint.vue";
 
 import Vue from "vue";
 
@@ -15,7 +16,19 @@ let components = {
 	Box,
 	Cen,
 	Hor,
-	Ver
+	Ver,
+	Breakpoint
+}
+
+export {
+	Grid,
+	Cols,
+	Rows,
+	Box,
+	Cen,
+	Hor,
+	Ver,
+	Breakpoint
 }
 
 export default {
