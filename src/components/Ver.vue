@@ -1,100 +1,116 @@
 <template>
-	<div class="ber-ver" :class="klass">
+	<div class="ver-component" :class="klass">
 		<slot />
 	</div>
 </template>
 
 <script>
-const flags = [
-	"top",
-	"bottom",
-	"left",
-	"right",
-	"center",
-	"middle",
-	"wrap",
-	"around",
-	"space",
-	"evenly"
-];
-const ber = ["grow", "expand", "full", "shrink"];
+
+const breakPoints = ["xs", "sm", "md", "lg", "xl", "xxl", "rh", "fh", "qh", "kh"];
+const boxClass = ["grow", "expand", "full", "shrink"];
+const boxStyle = ["size", "width", "height", "span"];
+
+function createClass(vm, prefix, flags) {
+	let s = {};
+
+	for (let key of flags) {
+		if (vm[key] !== undefined && vm[key] !== false) {
+			s[`${prefix}--${key}`] = true;
+		}
+	}
+	return s;
+}
+
+function createStyles(vm) {
+	let s = {};
+
+	if (vm.size !== undefined) {
+		s["flex-basis"] = vm.size;
+	}
+	if (vm.width !== undefined) {
+		s["width"] = vm.width;
+	}
+	if (vm.height !== undefined) {
+		s["height"] = vm.height;
+	}
+	if (vm.span) {
+		s["grid-column"] = 'span ' + vm.span;
+	}
+
+	return s;
+}
+
+const myClass = ["top", "bottom", "left", "right", "center", "middle", "wrap", "around", "space", "evenly"];
+const klass = [...boxClass, ...myClass];
+const params = [...boxStyle]
+
+
 export default {
-	props: [...flags, ...ber, "size"],
+	props: [...klass, ...params],
 	computed: {
 		klass() {
-			let s = {};
-			for (let key of flags) {
-				if (this[key] !== undefined && this[key] !== false) {
-					s[`ber-ver--${key}`] = true;
-				}
-			}
-			for (let key of ber) {
-				if (this[key] !== undefined && this[key] !== false) {
-					s[`ber-ver--${key}`] = true;
-				}
-			}
+			let s = Object.assign({},
+				createClass(this, "ver-component", myClass),
+				createClass(this, "ver-component", boxClass)
+			);
 			return s;
 		},
 		style() {
-			let s = {};
-			if (this.size !== undefined) {
-				s["flex-basis"] = this.size;
-			}
+			let s = createStyles(this);
 			return s;
 		}
 	}
-};
+}
 </script>
 
 <style lang="scss">
-.ber-ver {
+.ver-component {
 	display: flex;
 	flex-direction: column;
-	&.ber-ver--top {
+	&.ver-component--top {
 		justify-content: flex-start;
 	}
-	&.ber-ver--bottom {
+	&.ver-component--bottom {
 		justify-content: flex-end;
 	}
-	&.ber-ver--center {
+	&.ver-component--center {
 		align-items: center;
 	}
-	&.ber-ver--left {
+	&.ver-component--left {
 		align-items: flex-start;
 	}
-	&.ber-ver--right {
+	&.ver-component--right {
 		align-items: flex-start;
 	}
-	&.ber-ver--middle {
+	&.ver-component--middle {
 		justify-content: center;
 	}
-	&.ber-ver--space {
+	&.ver-component--space {
 		justify-content: space-between;
 	}
-	&.ber-ver--around {
+	&.ver-component--around {
 		justify-content: space-around;
 	}
-	&.ber-ver--evenly {
+	&.ver-component--evenly {
 		justify-content: space-evenly;
 	}
-
-	&.ber-ver--wrap {
+	&.ver-component--wrap {
 		flex-wrap: wrap;
 	}
 
-	&.ber-ver--grow {
+	&.ver-component--grow {
 		flex-grow: 1;
 	}
 
-	&.ber-ver--shrink {
+	&.ver-component--shrink {
 		flex-shrink: 1;
 	}
 
-	&.ber-ver--expand {
+	&.ver-component--expand {
 		flex-grow: 9999;
 	}
 
-	&.ber-ver--full {
+	&.ver-component--full {
 		height: 100%;
 	}
 }

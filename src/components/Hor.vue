@@ -1,11 +1,56 @@
 <template>
-	<div class="ber-hor" :class="klass" :style="style">
+	<div class="hor-component" :class="klass" :style="style">
 		<slot />
 	</div>
 </template>
 
 <script>
-const flags = [
+const breakPoints = [
+	"xs",
+	"sm",
+	"md",
+	"lg",
+	"xl",
+	"xxl",
+	"rh",
+	"fh",
+	"qh",
+	"kh"
+];
+const boxClass = ["grow", "expand", "full", "shrink"];
+const boxStyle = ["size", "width", "height", "span"];
+
+function createClass(vm, prefix, flags) {
+	let s = {};
+
+	for (let key of flags) {
+		if (vm[key] !== undefined && vm[key] !== false) {
+			s[`${prefix}--${key}`] = true;
+		}
+	}
+	return s;
+}
+
+function createStyles(vm) {
+	let s = {};
+
+	if (vm.size !== undefined) {
+		s["flex-basis"] = vm.size;
+	}
+	if (vm.width !== undefined) {
+		s["width"] = vm.width;
+	}
+	if (vm.height !== undefined) {
+		s["height"] = vm.height;
+	}
+	if (vm.span) {
+		s["grid-column"] = "span " + vm.span;
+	}
+
+	return s;
+}
+
+const myClass = [
 	"top",
 	"bottom",
 	"left",
@@ -17,32 +62,22 @@ const flags = [
 	"space",
 	"evenly"
 ];
-const ber = ["grow", "expand", "full", "shrink"];
+
+const props = [...boxStyle, ...boxClass, ...myClass];
+
 export default {
-	props: [...flags, ...ber, "size"],
+	props,
 	computed: {
 		klass() {
-			let s = {};
-			for (let key of flags) {
-				if (this[key] !== undefined && this[key] !== false) {
-					s[`ber-hor--${key}`] = true;
-				}
-			}
-			for (let key of ber) {
-				if (this[key] !== undefined && this[key] !== false) {
-					s[`ber-hor--${key}`] = true;
-				}
-			}
-			if (this.wrap === undefined) {
-				s["ber-hor--wrap"] = true;
-			}
+			let s = Object.assign(
+				{},
+				createClass(this, "hor-component", myClass),
+				createClass(this, "hor-component", boxClass)
+			);
 			return s;
 		},
 		style() {
-			let s = {};
-			if (this.size !== undefined) {
-				s["flex-basis"] = this.size;
-			}
+			let s = createStyles(this);
 			return s;
 		}
 	}
@@ -50,53 +85,54 @@ export default {
 </script>
 
 <style lang="scss">
-.ber-hor {
+.hor-component {
 	display: flex;
 	flex-direction: row;
-	&.ber-hor--top {
+	flex-wrap: wrap;
+	&.hor-component--top {
 		align-items: flex-start;
 	}
-	&.ber-hor--bottom {
+	&.hor-component--bottom {
 		align-items: flex-end;
 	}
-	&.ber-hor--center {
+	&.hor-component--center {
 		align-items: center;
 	}
-	&.ber-hor--left {
+	&.hor-component--left {
 		justify-content: flex-start;
 	}
-	&.ber-hor--right {
+	&.hor-component--right {
 		justify-content: flex-end;
 	}
-	&.ber-hor--middle {
+	&.hor-component--middle {
 		justify-content: center;
 	}
-	&.ber-hor--space {
+	&.hor-component--space {
 		justify-content: space-between;
 	}
-	&.ber-hor--around {
+	&.hor-component--around {
 		justify-content: space-around;
 	}
-	&.ber-hor--evenly {
+	&.hor-component--evenly {
 		justify-content: space-evenly;
 	}
-	&.ber-hor--wrap {
+	&.hor-component--wrap {
 		flex-wrap: wrap;
 	}
 
-	&.ber-hor--grow {
+	&.hor-component--grow {
 		flex-grow: 1;
 	}
 
-	&.ber-hor--shrink {
+	&.hor-component--shrink {
 		flex-shrink: 1;
 	}
 
-	&.ber-hor--expand {
+	&.hor-component--expand {
 		flex-grow: 9999;
 	}
 
-	&.ber-hor--full {
+	&.hor-component--full {
 		height: 100%;
 	}
 }

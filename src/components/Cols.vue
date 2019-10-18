@@ -1,98 +1,126 @@
 <template>
-	<div class="ber-cols" :style="style" :class="klass">
+	<div class="cols-component" :style="style" :class="klass">
 		<slot />
 	</div>
 </template>
 
 <script>
-const props = ["xs", "sm", "md", "lg", "xl", "xxl", "rh", "fh", "qh", "kh"];
-const ber = ["grow", "expand", "full", "shrink"];
+const breakPoints = [
+	"xs",
+	"sm",
+	"md",
+	"lg",
+	"xl",
+	"xxl",
+	"rh",
+	"fh",
+	"qh",
+	"kh"
+];
 
-export default {
-	props: ["gap", ...props, ...ber],
-	computed: {
-		style() {
-			let res = {};
+const boxClass = ["grow", "expand", "full", "shrink"];
+const boxStyle = ["size", "width", "height", "span"];
 
-			for (const size of props) {
-				if (this[size]) {
-					/** @type { String } */
-					let value = "" + this[size] + "";
+function createTracks(vm) {
+	let res = {};
+	let fit = vm.fit !== undefined ? "auto-fit" : "auto-fill";
 
-					// number of columns
-					if (value.match(/^\d+$/)) {
-						value = `repeat(auto-fill, minmax(calc(100% * 1 / ${value} - ${this
-							.gap || "0px"}), 1fr))`;
-					}
-					// repeat single column
-					else if (!value.includes(" ")) {
-						if (value.includes("/")) {
-							value = value.replace(
-								/(\d+)\/(\d+)/g,
-								`calc(100% * $1 / $2 - ${this.gap || "0px"})`
-							);
-						}
-						value = `repeat(auto-fill, minmax(${value}, 1fr))`;
-					} else {
-						if (value.includes("/")) {
-							value = value.replace(
-								/(\d+)\/(\d+)/g,
-								`calc(100% * $1 / $2 - ${this.gap || "0px"})`
-							);
-						}
-					}
-					res["--" + size] = "auto / " + value;
+	for (const size of breakPoints) {
+		if (vm[size]) {
+			/** @type { String } */
+			let value = "" + vm[size] + "";
+
+			// number of columns
+			if (value.match(/^\d+$/)) {
+				value = `repeat(${fit}, minmax(calc(100% * 1 / ${value} - ${vm.gap ||
+					"0px"}), 1fr))`;
+			} else if (!value.includes(" ")) {
+				// repeat single size
+				if (value.includes("/")) {
+					// calcaulte size if there is an expression
+					value = value.replace(
+						/(\d+)\/(\d+)/g,
+						`calc(100% * $1 / $2 - ${vm.gap || "0px"})`
+					);
+				}
+				value = `repeat(${fit}, minmax(${value}, 1fr))`;
+			} else {
+				// multiple sizes specified
+				if (value.includes("/")) {
+					// just calculate math
+					value = value.replace(
+						/(\d+)\/(\d+)/g,
+						`calc(100% * $1 / $2 - ${vm.gap || "0px"})`
+					);
 				}
 			}
+			res["--" + size] = value;
+		}
+	}
 
-			res["grid-gap"] = this.gap || "0px";
+	res["grid-gap"] = vm.gap || "0px";
+	return res;
+}
 
+function createClass(vm, prefix, flags) {
+	let s = {};
+
+	for (let key of flags) {
+		if (vm[key] !== undefined && vm[key] !== false) {
+			s[`${prefix}--${key}`] = true;
+		}
+	}
+	return s;
+}
+
+function createStyles(vm) {
+	let s = {};
+
+	if (vm.size !== undefined) {
+		s["flex-basis"] = vm.size;
+	}
+	if (vm.width !== undefined) {
+		s["width"] = vm.width;
+	}
+	if (vm.height !== undefined) {
+		s["height"] = vm.height;
+	}
+	if (vm.span) {
+		s["grid-column"] = "span " + vm.span;
+	}
+
+	return s;
+}
+
+const props = [...boxStyle, ...boxClass, ...breakPoints, "gap", "fit"];
+
+export default {
+	props,
+	computed: {
+		style() {
+			let res = Object.assign({}, createStyles(this), createTracks(this));
 			return res;
 		},
 		klass() {
-			let res = {};
-			for (const size of props) {
-				if (this[size]) {
-					res["ber-cols--" + size] = true;
-				}
-			}
-
-			for (let key of ber) {
-				if (this[key] !== undefined) {
-					res[`ber-cols--${key}`] = true;
-				}
-			}
-
-			return res;
+			let s = Object.assign(
+				{},
+				createClass(this, "cols-component", boxClass),
+				createClass(this, "cols-component", breakPoints)
+			);
+			return s;
 		}
 	}
 };
 </script>
 
 <style lang="scss">
-.ber-cols {
+$breakpoints: xs 0px 100%, sm 576px 540px, md 768px 720px, lg 992px 960px,
+	xl 1100px 1068px, xxl 1332px 1300px, rh 1632px 1600px, fh 1832px 1800px,
+	qh 2232px 2200px, kh 3032px 3000px !default;
+
+.cols-component {
 	display: grid;
 	grid-auto-flow: column;
-
-	&.ber-cols--grow {
-		flex-grow: 1;
-	}
-
-	&.ber-cols--shrink {
-		flex-shrink: 1;
-	}
-
-	&.ber-cols--expand {
-		flex-grow: 9999;
-	}
-
-	&.ber-cols--full {
-		height: 100%;
-	}
-
-	$breakpoints: xs 0px 100%, sm 576px 540px, md 768px 720px, lg 992px 960px,
-		xl 1100px 1068px, xxl 1332px 1300px, rh 1632px 1600px, fh 1832px 1800px,
-		qh 2232px 2200px, kh 3032px 3000px !default;
 
 	@each $breakpoint in $breakpoints {
 		$name: nth($breakpoint, 1);
@@ -100,10 +128,27 @@ export default {
 		$container: nth($breakpoint, 3);
 
 		@media only screen and (min-width: $size) {
-			&.ber-cols--#{$name} {
-				grid: var(--#{$name});
+			&.cols-component--#{$name} {
+				grid-template-columns: var(--#{$name});
+				grid-auto-flow: row;
 			}
 		}
+	}
+
+	&.cols-component--grow {
+		flex-grow: 1;
+	}
+
+	&.cols-component--shrink {
+		flex-shrink: 1;
+	}
+
+	&.cols-component--expand {
+		flex-grow: 9999;
+	}
+
+	&.cols-component--full {
+		height: 100%;
 	}
 }
 </style>

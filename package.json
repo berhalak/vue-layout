@@ -1,6 +1,7 @@
 {
   "name": "@berhalak/vue-layout",
-  "version": "0.0.1",
+  "version": "0.0.2",
+  "private": false,
   "description": "vue layout components",
   "main": "dist/vue-layout.umd.js",
   "types": "src/index.d.ts",
@@ -26,7 +27,7 @@
   "scripts": {
     "serve": "vue-cli-service serve",
     "build": "vue-cli-service build --target lib --name vue-layout ./src/index.ts",
-    "deploy": "npm run build && npm publish"
+    "deploy": "npm run build && npm publish --access public"
   },
   "devDependencies": {
     "vue": "^2.6.10",

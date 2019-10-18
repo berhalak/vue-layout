@@ -1,18 +1,52 @@
 <template>
-	<div class="ber ber-grid" :style="style" :class="klass">
+	<div class="grid-component" :style="style" :class="klass">
 		<slot />
 	</div>
 </template>
 
 <script>
+const breakPoints = ["xs", "sm", "md", "lg", "xl", "xxl", "rh", "fh", "qh", "kh"];
+
 const props = ["xs", "sm", "md", "lg", "xl", "xxl", "rh", "fh", "qh", "kh"];
-const ber = ["grow", "expand", "full", "shrink"];
+
+const boxClass = ["grow", "expand", "full", "shrink"];
+const boxStyle = ["size", "width", "height", "span"];
+
+function createClass(vm, prefix, flags) {
+	let s = {};
+
+	for (let key of flags) {
+		if (vm[key] !== undefined && vm[key] !== false) {
+			s[`${prefix}--${key}`] = true;
+		}
+	}
+	return s;
+}
+
+function createStyles(vm) {
+	let s = {};
+
+	if (vm.size !== undefined) {
+		s["flex-basis"] = vm.size;
+	}
+	if (vm.width !== undefined) {
+		s["width"] = vm.width;
+	}
+	if (vm.height !== undefined) {
+		s["height"] = vm.height;
+	}
+	if (vm.span) {
+		s["grid-column"] = 'span ' + vm.span;
+	}
+
+	return s;
+}
 
 export default {
-	props: ["gap", ...props, ...ber],
+	props: ["gap", ...props],
 	computed: {
 		style() {
-			let res = {};
+			let res = createStyles(this)
 
 			for (const size of props) {
 				if (this[size]) {
@@ -20,12 +54,11 @@ export default {
 					let value = "" + this[size] + "";
 
 					if (value.match(/^\d+$/)) {
-						value = `auto / repeat(auto-fill, minmax(calc(100% * 1 / ${value} - ${this
-							.gap || "1rem"}), 1fr))`;
-					} else if (value.match(/^\d+\/\d+$/)) {
-						value = `auto / repeat(auto-fill, minmax(calc(100% * ${value} - ${this
-							.gap || "1rem"}), 1fr))`;
-					} else if (!value.includes("/") && !value.includes(" ")) {
+						value = `auto / repeat(auto-fill, minmax(calc(100% * 1 / ${value} - ${this.gap || "1rem"}), 1fr))`;
+					}
+					else if (value.match(/^\d+\/\d+$/)) {
+						value = `auto / repeat(auto-fill, minmax(calc(100% * ${value} - ${this.gap || "1rem"}), 1fr))`;
+					} else if (!value.includes("/") && !value.includes(' ')) {
 						value = `auto / repeat(auto-fill, minmax(${value}, 1fr))`;
 					}
 
@@ -33,48 +66,23 @@ export default {
 				}
 			}
 
-			res["grid-gap"] = this.gap || "1rem";
+
+			res["grid-gap"] = (this.gap || "1rem");
 
 			return res;
 		},
 		klass() {
-			let res = {};
-			for (const size of props) {
-				if (this[size]) {
-					res["ber-grid--" + size] = true;
-				}
-			}
-
-			for (let key of ber) {
-				if (this[key] !== undefined) {
-					res[`ber-grid--${key}`] = true;
-				}
-			}
-			return res;
+				let s = Object.assign({},createClass(this, "grid-component", boxClass), createClass(this, "grid-component", breakPoints));
+			return s;
 		}
 	}
-};
+
+}
 </script>
 
 <style lang="scss">
-.ber-grid {
+.grid-component {
 	display: grid;
-
-	&.ber-grid--grow {
-		flex-grow: 1;
-	}
-
-	&.ber-grid--shrink {
-		flex-shrink: 1;
-	}
-
-	&.ber-grid--expand {
-		flex-grow: 9999;
-	}
-
-	&.ber-grid--full {
-		height: 100%;
-	}
 
 	$breakpoints: xs 0px 100%, sm 576px 540px, md 768px 720px, lg 992px 960px,
 		xl 1100px 1068px, xxl 1332px 1300px, rh 1632px 1600px, fh 1832px 1800px,
@@ -86,7 +94,7 @@ export default {
 		$container: nth($breakpoint, 3);
 
 		@media only screen and (min-width: $size) {
-			&.ber-grid--#{$name} {
+			&.grid-component--#{$name} {
 				grid: var(--#{$name});
 			}
 		}

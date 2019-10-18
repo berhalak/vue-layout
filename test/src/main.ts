@@ -5,7 +5,7 @@ import Item from './Item.vue'
 import Layout from "../../src/index"
 import "../../box.scss"
 
-Vue.use(Layout, "v-");
+Vue.use(Layout);
 Vue.component("item", Item);
 
 Vue.config.productionTip = false

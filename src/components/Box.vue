@@ -1,28 +1,66 @@
 <template>
-	<div class="ber-box" :class="klass" :style="style">
+	<div class="box-component" :class="klass" :style="style">
 		<slot />
 	</div>
 </template>
 
 <script>
-const ber = ["grow", "expand", "full", "shrink"];
+const breakPoints = [
+	"xs",
+	"sm",
+	"md",
+	"lg",
+	"xl",
+	"xxl",
+	"rh",
+	"fh",
+	"qh",
+	"kh"
+];
+const boxClass = ["grow", "expand", "full", "shrink"];
+const boxStyle = ["size", "width", "height", "span"];
+
+function createClass(vm, prefix, flags) {
+	let s = {};
+	for (let key of flags) {
+		if (vm[key] !== undefined && vm[key] !== false) {
+			s[`${prefix}--${key}`] = true;
+		}
+	}
+	return s;
+}
+
+function createStyles(vm) {
+	let s = {};
+
+	if (vm.size !== undefined) {
+		s["flex-basis"] = vm.size;
+	}
+	if (vm.width !== undefined) {
+		s["width"] = vm.width;
+	}
+	if (vm.height !== undefined) {
+		s["height"] = vm.height;
+	}
+	if (vm.span) {
+		s["grid-column"] = "span " + vm.span;
+	}
+
+	return s;
+}
+
+const klass = [...boxClass];
+const params = [...boxStyle];
+
 export default {
-	props: [...ber, "size"],
+	props: [...klass, ...params],
 	computed: {
 		klass() {
-			let s = {};
-			for (let key of ber) {
-				if (this[key] !== undefined) {
-					s[`ber-box--${key}`] = true;
-				}
-			}
+			let s = createClass(this, "box-component", boxClass);
 			return s;
 		},
 		style() {
-			let s = {};
-			if (this.size !== undefined) {
-				s["flex-basis"] = this.size;
-			}
+			let s = createStyles(this);
 			return s;
 		}
 	}
@@ -30,24 +68,24 @@ export default {
 </script>
 
 <style lang="scss">
-.ber-box {
+.box-component {
 	> div {
 		height: 100%;
 	}
 
-	&.ber-box--grow {
+	&.box-component--grow {
 		flex-grow: 1;
 	}
 
-	&.ber-box--shrink {
+	&.box-component--shrink {
 		flex-shrink: 1;
 	}
 
-	&.ber-box--expand {
+	&.box-component--expand {
 		flex-grow: 9999;
 	}
 
-	&.ber-box--full {
+	&.box-component--full {
 		height: 100%;
 	}
 }
