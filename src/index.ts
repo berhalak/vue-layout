@@ -7,6 +7,7 @@ import Hor from "./components/Hor.vue";
 import Ver from "./components/Ver.vue";
 import Breakpoint from "./components/Breakpoint.vue";
 import Max from "./components/Max.vue";
+import Wrap from "./components/Wrap.vue";
 
 import Vue from "vue";
 
@@ -19,6 +20,7 @@ let components = {
 	Hor,
 	Ver,
 	Max,
+	Wrap,
 	Breakpoint
 }
 
@@ -31,6 +33,7 @@ export {
 	Hor,
 	Max,
 	Ver,
+	Wrap,
 	Breakpoint
 }
 
