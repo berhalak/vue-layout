@@ -6,6 +6,7 @@ import Cen from "./components/Cen.vue";
 import Hor from "./components/Hor.vue";
 import Ver from "./components/Ver.vue";
 import Breakpoint from "./components/Breakpoint.vue";
+import Max from "./components/Max.vue";
 
 import Vue from "vue";
 
@@ -17,6 +18,7 @@ let components = {
 	Cen,
 	Hor,
 	Ver,
+	Max,
 	Breakpoint
 }
 
@@ -27,6 +29,7 @@ export {
 	Box,
 	Cen,
 	Hor,
+	Max,
 	Ver,
 	Breakpoint
 }

@@ -1,5 +1,5 @@
 <template>
-	<div>
+	<con>
 		<div style="height: 100px; border: 1px solid black">
 			<hor full>
 				<box size="200px" grow>
@@ -86,7 +86,7 @@
 			</ver>
 		</div>
 		<breakpoint />
-	</div>
+	</con>
 </template>
 
 <script lang="ts">

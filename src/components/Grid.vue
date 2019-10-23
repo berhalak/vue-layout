@@ -54,7 +54,7 @@ function createStyles(vm) {
 }
 
 export default {
-	props: ["gap", ...props],
+	props: ["gap", ...props, ...boxClass, ...boxStyle],
 	computed: {
 		style() {
 			let res = createStyles(this);
