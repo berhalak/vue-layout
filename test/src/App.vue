@@ -71,6 +71,21 @@
 				<item></item>
 			</div>
 		</div>
+
+		<div style="height: 100px; border: 1px solid black">
+			<ver scroll full>
+				<item></item>
+				<item></item>
+				<item></item>
+				<item></item>
+				<item></item>
+				<item></item>
+				<item></item>
+				<item></item>
+				<item></item>
+			</ver>
+		</div>
+		<breakpoint />
 	</div>
 </template>
 

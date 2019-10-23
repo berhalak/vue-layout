@@ -17,7 +17,8 @@ const breakPoints = [
 	"qh",
 	"kh"
 ];
-const boxClass = ["grow", "expand", "full", "shrink"];
+
+const boxClass = ["grow", "expand", "full", "shrink", "zero", "scroll"];
 const boxStyle = ["size", "width", "height", "span"];
 
 function createClass(vm, prefix, flags) {
@@ -87,6 +88,10 @@ export default {
 
 	&.box-component--full {
 		height: 100%;
+	}
+
+	&.box-component--zero {
+		flex-basis: 0px;
 	}
 }
 </style>

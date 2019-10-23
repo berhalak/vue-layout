@@ -18,7 +18,7 @@ const breakPoints = [
 	"kh"
 ];
 
-const boxClass = ["grow", "expand", "full", "shrink"];
+const boxClass = ["grow", "expand", "full", "shrink", "zero", "scroll"];
 const boxStyle = ["size", "width", "height", "span"];
 
 function createTracks(vm) {
@@ -149,6 +149,14 @@ $breakpoints: xs 0px 100%, sm 576px 540px, md 768px 720px, lg 992px 960px,
 
 	&.cols-component--full {
 		height: 100%;
+	}
+
+	&.cols-component--zero {
+		flex-basis: 0px;
+	}
+
+	&.cols-component--scroll {
+		overflow: auto;
 	}
 }
 </style>

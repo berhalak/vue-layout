@@ -5,9 +5,19 @@
 </template>
 
 <script>
-
-const breakPoints = ["xs", "sm", "md", "lg", "xl", "xxl", "rh", "fh", "qh", "kh"];
-const boxClass = ["grow", "expand", "full", "shrink"];
+const breakPoints = [
+	"xs",
+	"sm",
+	"md",
+	"lg",
+	"xl",
+	"xxl",
+	"rh",
+	"fh",
+	"qh",
+	"kh"
+];
+const boxClass = ["grow", "expand", "full", "shrink", "zero", "scroll"];
 const boxStyle = ["size", "width", "height", "span"];
 
 function createClass(vm, prefix, flags) {
@@ -34,7 +44,7 @@ function createStyles(vm) {
 		s["height"] = vm.height;
 	}
 	if (vm.span) {
-		s["grid-column"] = 'span ' + vm.span;
+		s["grid-column"] = "span " + vm.span;
 	}
 
 	return s;
@@ -55,7 +65,7 @@ export default {
 			return s;
 		}
 	}
-}
+};
 </script>
 
 <style lang="scss">
@@ -78,6 +88,14 @@ export default {
 
 	&.cen-component--full {
 		height: 100%;
+	}
+
+	&.cen-component--zero {
+		flex-basis: 0px;
+	}
+
+	&.cen-component--scroll {
+		overflow: auto;
 	}
 }
 </style>

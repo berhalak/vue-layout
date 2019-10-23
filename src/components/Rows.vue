@@ -18,7 +18,7 @@ const breakPoints = [
 	"kh"
 ];
 
-const boxClass = ["grow", "expand", "full", "shrink"];
+const boxClass = ["grow", "expand", "full", "shrink", "zero", "scroll"];
 const boxStyle = ["size", "width", "height", "span"];
 
 function createTracks(vm) {
@@ -117,7 +117,9 @@ $breakpoints: xs 0px 100%, sm 576px 540px, md 768px 720px, lg 992px 960px,
 	xl 1100px 1068px, xxl 1332px 1300px, rh 1632px 1600px, fh 1832px 1800px,
 	qh 2232px 2200px, kh 3032px 3000px !default;
 
-.rows-component {
+$name: rows;
+
+.#{$name}-component {
 	display: grid;
 
 	@each $breakpoint in $breakpoints {
@@ -126,27 +128,35 @@ $breakpoints: xs 0px 100%, sm 576px 540px, md 768px 720px, lg 992px 960px,
 		$container: nth($breakpoint, 3);
 
 		@media only screen and (min-width: $size) {
-			&.rows-component--#{$name} {
+			&.#{$name}-component--#{$name} {
 				grid-template-rows: var(--#{$name});
 				grid-auto-flow: column;
 			}
 		}
 	}
 
-	&.rows-component--grow {
+	&.#{$name}-component--grow {
 		flex-grow: 1;
 	}
 
-	&.rows-component--shrink {
+	&.#{$name}-component--shrink {
 		flex-shrink: 1;
 	}
 
-	&.rows-component--expand {
+	&.#{$name}-component--expand {
 		flex-grow: 9999;
 	}
 
-	&.rows-component--full {
+	&.#{$name}-component--full {
 		height: 100%;
+	}
+
+	&.#{$name}-component--zero {
+		flex-basis: 0px;
+	}
+
+	&.#{$name}-component--scroll {
+		overflow: auto;
 	}
 }
 </style>

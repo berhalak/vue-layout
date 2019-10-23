@@ -5,11 +5,22 @@
 </template>
 
 <script>
-const breakPoints = ["xs", "sm", "md", "lg", "xl", "xxl", "rh", "fh", "qh", "kh"];
+const breakPoints = [
+	"xs",
+	"sm",
+	"md",
+	"lg",
+	"xl",
+	"xxl",
+	"rh",
+	"fh",
+	"qh",
+	"kh"
+];
 
 const props = ["xs", "sm", "md", "lg", "xl", "xxl", "rh", "fh", "qh", "kh"];
 
-const boxClass = ["grow", "expand", "full", "shrink"];
+const boxClass = ["grow", "expand", "full", "shrink", "zero", "scroll"];
 const boxStyle = ["size", "width", "height", "span"];
 
 function createClass(vm, prefix, flags) {
@@ -36,7 +47,7 @@ function createStyles(vm) {
 		s["height"] = vm.height;
 	}
 	if (vm.span) {
-		s["grid-column"] = 'span ' + vm.span;
+		s["grid-column"] = "span " + vm.span;
 	}
 
 	return s;
@@ -46,7 +57,7 @@ export default {
 	props: ["gap", ...props],
 	computed: {
 		style() {
-			let res = createStyles(this)
+			let res = createStyles(this);
 
 			for (const size of props) {
 				if (this[size]) {
@@ -54,11 +65,12 @@ export default {
 					let value = "" + this[size] + "";
 
 					if (value.match(/^\d+$/)) {
-						value = `auto / repeat(auto-fill, minmax(calc(100% * 1 / ${value} - ${this.gap || "1rem"}), 1fr))`;
-					}
-					else if (value.match(/^\d+\/\d+$/)) {
-						value = `auto / repeat(auto-fill, minmax(calc(100% * ${value} - ${this.gap || "1rem"}), 1fr))`;
-					} else if (!value.includes("/") && !value.includes(' ')) {
+						value = `auto / repeat(auto-fill, minmax(calc(100% * 1 / ${value} - ${this
+							.gap || "1rem"}), 1fr))`;
+					} else if (value.match(/^\d+\/\d+$/)) {
+						value = `auto / repeat(auto-fill, minmax(calc(100% * ${value} - ${this
+							.gap || "1rem"}), 1fr))`;
+					} else if (!value.includes("/") && !value.includes(" ")) {
 						value = `auto / repeat(auto-fill, minmax(${value}, 1fr))`;
 					}
 
@@ -66,18 +78,20 @@ export default {
 				}
 			}
 
-
-			res["grid-gap"] = (this.gap || "1rem");
+			res["grid-gap"] = this.gap || "1rem";
 
 			return res;
 		},
 		klass() {
-				let s = Object.assign({},createClass(this, "grid-component", boxClass), createClass(this, "grid-component", breakPoints));
+			let s = Object.assign(
+				{},
+				createClass(this, "grid-component", boxClass),
+				createClass(this, "grid-component", breakPoints)
+			);
 			return s;
 		}
 	}
-
-}
+};
 </script>
 
 <style lang="scss">
@@ -98,6 +112,34 @@ export default {
 				grid: var(--#{$name});
 			}
 		}
+	}
+
+	&.grid-component--zero {
+		flex-basis: 0px;
+	}
+
+	&.grid-component--grow {
+		flex-grow: 1;
+	}
+
+	&.grid-component--shrink {
+		flex-shrink: 1;
+	}
+
+	&.grid-component--expand {
+		flex-grow: 9999;
+	}
+
+	&.grid-component--zero {
+		flex-basis: 0px;
+	}
+
+	&.grid-component--scroll {
+		overflow: auto;
+	}
+
+	&.grid-component--full {
+		height: 100%;
 	}
 }
 </style>

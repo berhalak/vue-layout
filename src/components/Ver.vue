@@ -5,9 +5,19 @@
 </template>
 
 <script>
-
-const breakPoints = ["xs", "sm", "md", "lg", "xl", "xxl", "rh", "fh", "qh", "kh"];
-const boxClass = ["grow", "expand", "full", "shrink"];
+const breakPoints = [
+	"xs",
+	"sm",
+	"md",
+	"lg",
+	"xl",
+	"xxl",
+	"rh",
+	"fh",
+	"qh",
+	"kh"
+];
+const boxClass = ["grow", "expand", "full", "shrink", "zero", "scroll"];
 const boxStyle = ["size", "width", "height", "span"];
 
 function createClass(vm, prefix, flags) {
@@ -34,22 +44,33 @@ function createStyles(vm) {
 		s["height"] = vm.height;
 	}
 	if (vm.span) {
-		s["grid-column"] = 'span ' + vm.span;
+		s["grid-column"] = "span " + vm.span;
 	}
 
 	return s;
 }
 
-const myClass = ["top", "bottom", "left", "right", "center", "middle", "wrap", "around", "space", "evenly"];
+const myClass = [
+	"top",
+	"bottom",
+	"left",
+	"right",
+	"center",
+	"middle",
+	"wrap",
+	"around",
+	"space",
+	"evenly"
+];
 const klass = [...boxClass, ...myClass];
-const params = [...boxStyle]
-
+const params = [...boxStyle];
 
 export default {
 	props: [...klass, ...params],
 	computed: {
 		klass() {
-			let s = Object.assign({},
+			let s = Object.assign(
+				{},
 				createClass(this, "ver-component", myClass),
 				createClass(this, "ver-component", boxClass)
 			);
@@ -60,7 +81,7 @@ export default {
 			return s;
 		}
 	}
-}
+};
 </script>
 
 <style lang="scss">
@@ -108,6 +129,14 @@ export default {
 
 	&.ver-component--expand {
 		flex-grow: 9999;
+	}
+
+	&.ver-component--zero {
+		flex-basis: 0px;
+	}
+
+	&.ver-component--scroll {
+		overflow: auto;
 	}
 
 	&.ver-component--full {

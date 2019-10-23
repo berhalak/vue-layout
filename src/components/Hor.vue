@@ -17,7 +17,7 @@ const breakPoints = [
 	"qh",
 	"kh"
 ];
-const boxClass = ["grow", "expand", "full", "shrink"];
+const boxClass = ["grow", "expand", "full", "shrink", "zero", "scroll"];
 const boxStyle = ["size", "width", "height", "span"];
 
 function createClass(vm, prefix, flags) {
@@ -134,6 +134,14 @@ export default {
 
 	&.hor-component--full {
 		height: 100%;
+	}
+
+	&.hor-component--zero {
+		flex-basis: 0px;
+	}
+
+	&.hor-component--scroll {
+		overflow: auto;
 	}
 }
 </style>
