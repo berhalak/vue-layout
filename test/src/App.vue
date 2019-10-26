@@ -1,5 +1,5 @@
 <template>
-	<con>
+	<max>
 		<div style="height: 100px; border: 1px solid black">
 			<hor full>
 				<box size="200px" grow>
@@ -85,8 +85,17 @@
 				<item></item>
 			</ver>
 		</div>
+
+		<div style="height: 100px; border: 1px solid black">
+			<cols xs="1/4" full gap="10px">
+				<item></item>
+				<item></item>
+				<item></item>
+				<item></item>
+			</cols>
+		</div>
 		<breakpoint />
-	</con>
+	</max>
 </template>
 
 <script lang="ts">

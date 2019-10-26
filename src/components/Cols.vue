@@ -32,8 +32,7 @@ function createTracks(vm) {
 
 			// number of columns
 			if (value.match(/^\d+$/)) {
-				value = `repeat(${fit}, minmax(calc(100% * 1 / ${value} - ${vm.gap ||
-					"0px"}), 1fr))`;
+				value = `repeat(${value}, 1fr)`;
 			} else if (!value.includes(" ")) {
 				// repeat single size
 				if (value.includes("/")) {
@@ -46,11 +45,14 @@ function createTracks(vm) {
 				value = `repeat(${fit}, minmax(${value}, 1fr))`;
 			} else {
 				// multiple sizes specified
+				let columnCount = value.split(" ").length;
+				let gap = vm.gap || "0px";
+				let fullSize = `calc(100% - ${gap} * ${columnCount - 1})`;
 				if (value.includes("/")) {
 					// just calculate math
 					value = value.replace(
 						/(\d+)\/(\d+)/g,
-						`calc(100% * $1 / $2 - ${vm.gap || "0px"})`
+						`calc(${fullSize} * $1 / $2)`
 					);
 				}
 			}

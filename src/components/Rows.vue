@@ -44,11 +44,14 @@ function createTracks(vm) {
 				value = `repeat(auto-fill, minmax(${value}, 1fr))`;
 			} else {
 				// multiple sizes specified
+				let columnCount = value.split(" ").length;
+				let gap = vm.gap || "0px";
+				let fullSize = `calc(100% - ${gap} * ${columnCount - 1})`;
 				if (value.includes("/")) {
 					// just calculate math
 					value = value.replace(
 						/(\d+)\/(\d+)/g,
-						`calc(100% * $1 / $2 - ${vm.gap || "0px"})`
+						`calc(${fullSize} * $1 / $2)`
 					);
 				}
 			}
