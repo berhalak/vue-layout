@@ -1,5 +1,5 @@
 <template>
-	<div class="wrap-component" :class="klass" :style="style">
+	<div class="wrap-component" :class="klass" :style="style" @click="$emit('click')">
 		<slot />
 	</div>
 </template>
@@ -70,8 +70,6 @@ export default {
 
 <style lang="scss">
 .wrap-component {
-
-
 	&.wrap-component--grow {
 		flex-grow: 1;
 	}

@@ -1,5 +1,5 @@
 <template>
-	<div class="cen-component" :class="klass" :style="style">
+	<div class="cen-component" :class="klass" :style="style" @click="$emit('click')">
 		<slot />
 	</div>
 </template>
