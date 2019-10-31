@@ -1,8 +1,4 @@
 test/
 temp/
 **/.out/
-dist/demo.html
-vue.config.js
-src/
-tsconfig.json
 box.scss
