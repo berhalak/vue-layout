@@ -19,7 +19,7 @@ const breakPoints = [
 ];
 
 const boxClass = ["grow", "expand", "full", "shrink", "zero", "scroll"];
-const boxStyle = ["size", "width", "height", "span"];
+const boxStyle = ["size", "width", "height", "span", "area"];
 
 function createTracks(vm) {
 	let res = {};
@@ -91,6 +91,9 @@ function createStyles(vm) {
 		s["grid-column"] = "span " + vm.span;
 	}
 
+ if (vm.area){
+        s["grid-area"] = vm.area;
+    }
 	return s;
 }
 

@@ -21,7 +21,7 @@ const breakPoints = [
 const props = ["xs", "sm", "md", "lg", "xl", "xxl", "rh", "fh", "qh", "kh"];
 
 const boxClass = ["grow", "expand", "full", "shrink", "zero", "scroll"];
-const boxStyle = ["size", "width", "height", "span"];
+const boxStyle = ["size", "width", "height", "span", "area"];
 
 function createClass(vm, prefix, flags) {
 	let s = {};
@@ -49,7 +49,9 @@ function createStyles(vm) {
 	if (vm.span) {
 		s["grid-column"] = "span " + vm.span;
 	}
-
+ if (vm.area){
+        s["grid-area"] = vm.area;
+    }
 	return s;
 }
 
@@ -59,26 +61,20 @@ export default {
 		style() {
 			let res = createStyles(this);
 
-			for (const size of props) {
+			for (const size of breakPoints) {
 				if (this[size]) {
-					/** @type { String } */
-					let value = "" + this[size] + "";
-
-					if (value.match(/^\d+$/)) {
-						value = `auto / repeat(auto-fill, minmax(calc(100% * 1 / ${value} - ${this
-							.gap || "1rem"}), 1fr))`;
-					} else if (value.match(/^\d+\/\d+$/)) {
-						value = `auto / repeat(auto-fill, minmax(calc(100% * ${value} - ${this
-							.gap || "1rem"}), 1fr))`;
-					} else if (!value.includes("/") && !value.includes(" ")) {
-						value = `auto / repeat(auto-fill, minmax(${value}, 1fr))`;
+					let value = this[size];
+					var parts = value.split("|");
+					var rows = parts[0].split("/").map(x => `'${x.trim()}'`).join(" ");
+					var cols = parts[1] || "";
+					if (cols) {
+						cols = "/" + cols;
 					}
-
-					res["--" + size] = value;
+					res["--grid-component--" + size] = `${rows} ${cols}`;
 				}
 			}
 
-			res["grid-gap"] = this.gap || "1rem";
+			res["grid-gap"] = this.gap || "0rem";
 
 			return res;
 		},
@@ -109,7 +105,7 @@ export default {
 
 		@media only screen and (min-width: $size) {
 			&.grid-component--#{$name} {
-				grid: var(--#{$name});
+				grid: var(--grid-component--#{$name});
 			}
 		}
 	}

@@ -21,7 +21,7 @@ const breakPoints = [
 const props = ["xs", "sm", "md", "lg", "xl", "xxl", "rh", "fh", "qh", "kh"];
 
 const boxClass = ["grow", "expand", "full", "shrink", "zero", "scroll"];
-const boxStyle = ["size", "width", "height", "span"];
+const boxStyle = ["size", "width", "height", "span", "area"];
 
 function createClass(vm, prefix, flags) {
 	let s = {};
@@ -49,7 +49,9 @@ function createStyles(vm) {
 	if (vm.span) {
 		s["grid-column"] = "span " + vm.span;
 	}
-
+ if (vm.area){
+        s["grid-area"] = vm.area;
+    }
 	return s;
 }
 
