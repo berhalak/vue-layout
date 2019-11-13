@@ -46,9 +46,9 @@ function createStyles(vm) {
 	if (vm.span) {
 		s["grid-column"] = "span " + vm.span;
 	}
- if (vm.area){
-        s["grid-area"] = vm.area;
-    }
+	if (vm.area) {
+		s["grid-area"] = vm.area;
+	}
 	return s;
 }
 
@@ -88,7 +88,8 @@ export default {
 		height: 100%;
 	}
 
-	&.wrap-component--zero {
+	&.wrap-component--scroll {
+		overflow: auto;
 		flex-basis: 0px;
 	}
 }

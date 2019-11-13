@@ -91,9 +91,9 @@ function createStyles(vm) {
 		s["grid-column"] = "span " + vm.span;
 	}
 
- if (vm.area){
-        s["grid-area"] = vm.area;
-    }
+	if (vm.area) {
+		s["grid-area"] = vm.area;
+	}
 	return s;
 }
 
@@ -162,6 +162,7 @@ $breakpoints: xs 0px 100%, sm 576px 540px, md 768px 720px, lg 992px 960px,
 
 	&.cols-component--scroll {
 		overflow: auto;
+		flex-basis: 0px;
 	}
 }
 </style>

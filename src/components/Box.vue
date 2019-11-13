@@ -46,9 +46,9 @@ function createStyles(vm) {
 	if (vm.span) {
 		s["grid-column"] = "span " + vm.span;
 	}
-    if (vm.area){
-        s["grid-area"] = vm.area;
-    }
+	if (vm.area) {
+		s["grid-area"] = vm.area;
+	}
 
 	return s;
 }
@@ -73,7 +73,7 @@ export default {
 
 <style lang="scss">
 .box-component {
-	> div {
+	> * {
 		height: 100%;
 	}
 
@@ -94,6 +94,11 @@ export default {
 	}
 
 	&.box-component--zero {
+		flex-basis: 0px;
+	}
+
+	&.box-component--scroll {
+		overflow: auto;
 		flex-basis: 0px;
 	}
 }

@@ -49,10 +49,15 @@ function createStyles(vm) {
 	if (vm.span) {
 		s["grid-column"] = "span " + vm.span;
 	}
- if (vm.area){
-        s["grid-area"] = vm.area;
-    }
+	if (vm.area) {
+		s["grid-area"] = vm.area;
+	}
 	return s;
+}
+
+function isRawSyntax(value) {
+	if (!value) return true;
+	return value.includes("'") || value.includes('"');
 }
 
 export default {
@@ -64,13 +69,21 @@ export default {
 			for (const size of breakPoints) {
 				if (this[size]) {
 					let value = this[size];
-					var parts = value.split("|");
-					var rows = parts[0].split("/").map(x => `'${x.trim()}'`).join(" ");
-					var cols = parts[1] || "";
-					if (cols) {
-						cols = "/" + cols;
+
+					if (isRawSyntax(value)) {
+						res["--grid-component--" + size] = value;
+					} else {
+						var parts = value.split("|");
+						var rows = parts[0]
+							.split("/")
+							.map(x => `'${x.trim()}'`)
+							.join(" ");
+						var cols = parts[1] || "";
+						if (cols) {
+							cols = "/" + cols;
+						}
+						res["--grid-component--" + size] = `${rows} ${cols}`;
 					}
-					res["--grid-component--" + size] = `${rows} ${cols}`;
 				}
 			}
 
@@ -132,6 +145,7 @@ export default {
 
 	&.grid-component--scroll {
 		overflow: auto;
+		flex-basis: 0px;
 	}
 
 	&.grid-component--full {
