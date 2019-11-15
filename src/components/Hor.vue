@@ -61,6 +61,7 @@ const myClass = [
 	"middle",
 	"wrap",
 	"around",
+	"base",
 	"space",
 	"evenly"
 ];
@@ -99,6 +100,9 @@ export default {
 	}
 	&.hor-component--center {
 		align-items: center;
+	}
+	&.hor-component--base {
+		align-items: baseline;
 	}
 	&.hor-component--left {
 		justify-content: flex-start;
