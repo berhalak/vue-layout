@@ -1,5 +1,5 @@
 <template>
-	<div class="ver-component" :class="klass" @click="$emit('click')">
+	<div class="ver-component" :class="klass" @click="$emit('click')" :style="style">
 		<slot />
 	</div>
 </template>
@@ -49,6 +49,9 @@ function createStyles(vm) {
 	if (vm.area) {
 		s["grid-area"] = vm.area;
 	}
+	if (vm.gap) {
+		s["--ver-gap"] = vm.gap;
+	}
 	return s;
 }
 
@@ -62,7 +65,8 @@ const myClass = [
 	"wrap",
 	"around",
 	"space",
-	"evenly"
+	"evenly",
+	"gap"
 ];
 const klass = [...boxClass, ...myClass];
 const params = [...boxStyle];
@@ -144,6 +148,10 @@ export default {
 
 	&.ver-component--full {
 		height: 100%;
+	}
+
+	&.ver-component--gap > * + * {
+		margin-top: var(--ver-gap);
 	}
 }
 </style>

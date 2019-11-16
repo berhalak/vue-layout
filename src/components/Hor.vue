@@ -49,6 +49,11 @@ function createStyles(vm) {
 	if (vm.area) {
 		s["grid-area"] = vm.area;
 	}
+
+	if (vm.gap) {
+		s["--hor-gap"] = vm.gap;
+	}
+
 	return s;
 }
 
@@ -63,7 +68,8 @@ const myClass = [
 	"around",
 	"base",
 	"space",
-	"evenly"
+	"evenly",
+	"gap"
 ];
 
 const props = [...boxStyle, ...boxClass, ...myClass];
@@ -144,6 +150,10 @@ export default {
 
 	&.hor-component--zero {
 		flex-basis: 0px;
+	}
+
+	&.hor-component--gap > * + * {
+		margin-top: var(--hor-gap);
 	}
 
 	&.hor-component--scroll {

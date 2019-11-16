@@ -72,8 +72,9 @@
 			</div>
 		</div>
 
+		<div>Ver scroll full gap</div>
 		<div style="height: 100px; border: 1px solid black">
-			<ver scroll full>
+			<ver scroll full gap="1em">
 				<item></item>
 				<item></item>
 				<item></item>
@@ -94,23 +95,23 @@
 				<item></item>
 			</cols>
 		</div>
-        <div style="height: 300px; border: 1px solid black">
-			<grid xs="h / l / r / c/ f" lg="h h h / l c r / f f f | 100px 1fr 100px" gap='1em'>
-				<box area='h'>
-                    <item />
-                    </box>
-                    	<box area='l'>
-                    <item />
-                    </box>
-                    	<box area='r'>
-                    <item />
-                    </box>
-                    	<box area='c'>
-                    <item />
-                    </box>
-                    	<box area='f'>
-                    <item />
-                    </box>
+		<div style="height: 300px; border: 1px solid black">
+			<grid xs="h / l / r / c/ f" lg="h h h / l c r / f f f | 100px 1fr 100px" gap="1em">
+				<box area="h">
+					<item />
+				</box>
+				<box area="l">
+					<item />
+				</box>
+				<box area="r">
+					<item />
+				</box>
+				<box area="c">
+					<item />
+				</box>
+				<box area="f">
+					<item />
+				</box>
 			</grid>
 		</div>
 		<breakpoint />
