@@ -116,7 +116,8 @@ export default {
 		klass() {
 			let s = Object.assign(
 				createClass(this, "cols-component", boxClass),
-				createClass(this, "cols-component", myClass)
+				createClass(this, "cols-component", myClass),
+				createClass(this, "cols-component", breakPoints)
 			);
 			return s;
 		}

@@ -1268,12 +1268,12 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var Grid = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"502b32a5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Cols.vue?vue&type=template&id=5b2e97f0&
-var Colsvue_type_template_id_5b2e97f0_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"cols-component",class:_vm.klass,style:(_vm.style),on:{"click":function($event){return _vm.$emit('click')}}},[_vm._t("default")],2)}
-var Colsvue_type_template_id_5b2e97f0_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"502b32a5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Cols.vue?vue&type=template&id=7da84cb6&
+var Colsvue_type_template_id_7da84cb6_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"cols-component",class:_vm.klass,style:(_vm.style),on:{"click":function($event){return _vm.$emit('click')}}},[_vm._t("default")],2)}
+var Colsvue_type_template_id_7da84cb6_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Cols.vue?vue&type=template&id=5b2e97f0&
+// CONCATENATED MODULE: ./src/components/Cols.vue?vue&type=template&id=7da84cb6&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Cols.vue?vue&type=script&lang=js&
 //
@@ -1394,7 +1394,8 @@ const Colsvue_type_script_lang_js_props = [
 		klass() {
 			let s = Object.assign(
 				Colsvue_type_script_lang_js_createClass(this, "cols-component", Colsvue_type_script_lang_js_boxClass),
-				Colsvue_type_script_lang_js_createClass(this, "cols-component", myClass)
+				Colsvue_type_script_lang_js_createClass(this, "cols-component", myClass),
+				Colsvue_type_script_lang_js_createClass(this, "cols-component", Colsvue_type_script_lang_js_breakPoints)
 			);
 			return s;
 		}
@@ -1417,8 +1418,8 @@ var Colsvue_type_style_index_0_lang_scss_ = __webpack_require__("087e");
 
 var Cols_component = normalizeComponent(
   components_Colsvue_type_script_lang_js_,
-  Colsvue_type_template_id_5b2e97f0_render,
-  Colsvue_type_template_id_5b2e97f0_staticRenderFns,
+  Colsvue_type_template_id_7da84cb6_render,
+  Colsvue_type_template_id_7da84cb6_staticRenderFns,
   false,
   null,
   null,
