@@ -286,7 +286,7 @@ var update = add("1ea123be", content, true, {"sourceMap":false,"shadowMode":fals
 
 exports = module.exports = __webpack_require__("24fb")(false);
 // Module
-exports.push([module.i, ".cols-component{display:grid;grid-auto-flow:column}@media only screen and (min-width:0px){.cols-component.cols-component--xs{grid-template-columns:var(--xs);grid-auto-flow:row}}@media only screen and (min-width:576px){.cols-component.cols-component--sm{grid-template-columns:var(--sm);grid-auto-flow:row}}@media only screen and (min-width:768px){.cols-component.cols-component--md{grid-template-columns:var(--md);grid-auto-flow:row}}@media only screen and (min-width:992px){.cols-component.cols-component--lg{grid-template-columns:var(--lg);grid-auto-flow:row}}@media only screen and (min-width:1100px){.cols-component.cols-component--xl{grid-template-columns:var(--xl);grid-auto-flow:row}}@media only screen and (min-width:1332px){.cols-component.cols-component--xxl{grid-template-columns:var(--xxl);grid-auto-flow:row}}@media only screen and (min-width:1632px){.cols-component.cols-component--rh{grid-template-columns:var(--rh);grid-auto-flow:row}}@media only screen and (min-width:1832px){.cols-component.cols-component--fh{grid-template-columns:var(--fh);grid-auto-flow:row}}@media only screen and (min-width:2232px){.cols-component.cols-component--qh{grid-template-columns:var(--qh);grid-auto-flow:row}}@media only screen and (min-width:3032px){.cols-component.cols-component--kh{grid-template-columns:var(--kh);grid-auto-flow:row}}.cols-component.cols-component--grow{flex-grow:1}.cols-component.cols-component--shrink{flex-shrink:1}.cols-component.cols-component--expand{flex-grow:9999}.cols-component.cols-component--full{height:100%}.cols-component.cols-component--zero{flex-basis:0px}.cols-component.cols-component--scroll{overflow:auto;flex-basis:0px}", ""]);
+exports.push([module.i, ".cols-component{display:grid;grid-auto-flow:column}@media only screen and (min-width:0px){.cols-component.cols-component--xs{grid-template-columns:var(--xs);grid-auto-flow:row}}@media only screen and (min-width:576px){.cols-component.cols-component--sm{grid-template-columns:var(--sm);grid-auto-flow:row}}@media only screen and (min-width:768px){.cols-component.cols-component--md{grid-template-columns:var(--md);grid-auto-flow:row}}@media only screen and (min-width:992px){.cols-component.cols-component--lg{grid-template-columns:var(--lg);grid-auto-flow:row}}@media only screen and (min-width:1100px){.cols-component.cols-component--xl{grid-template-columns:var(--xl);grid-auto-flow:row}}@media only screen and (min-width:1332px){.cols-component.cols-component--xxl{grid-template-columns:var(--xxl);grid-auto-flow:row}}@media only screen and (min-width:1632px){.cols-component.cols-component--rh{grid-template-columns:var(--rh);grid-auto-flow:row}}@media only screen and (min-width:1832px){.cols-component.cols-component--fh{grid-template-columns:var(--fh);grid-auto-flow:row}}@media only screen and (min-width:2232px){.cols-component.cols-component--qh{grid-template-columns:var(--qh);grid-auto-flow:row}}@media only screen and (min-width:3032px){.cols-component.cols-component--kh{grid-template-columns:var(--kh);grid-auto-flow:row}}.cols-component.cols-component--grow{flex-grow:1}.cols-component.cols-component--shrink{flex-shrink:1}.cols-component.cols-component--expand{flex-grow:9999}.cols-component.cols-component--full{height:100%}.cols-component.cols-component--zero{flex-basis:0px}.cols-component.cols-component--top{align-items:start}.cols-component.cols-component--bottom{align-items:end}.cols-component.cols-component--scroll{overflow:auto;flex-basis:0px}", ""]);
 
 
 /***/ }),
@@ -1259,12 +1259,12 @@ var component = normalizeComponent(
 )
 
 /* harmony default export */ var Grid = (component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"502b32a5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Cols.vue?vue&type=template&id=71f85b06&
-var Colsvue_type_template_id_71f85b06_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"cols-component",class:_vm.klass,style:(_vm.style),on:{"click":function($event){return _vm.$emit('click')}}},[_vm._t("default")],2)}
-var Colsvue_type_template_id_71f85b06_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"502b32a5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Cols.vue?vue&type=template&id=5b2e97f0&
+var Colsvue_type_template_id_5b2e97f0_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"cols-component",class:_vm.klass,style:(_vm.style),on:{"click":function($event){return _vm.$emit('click')}}},[_vm._t("default")],2)}
+var Colsvue_type_template_id_5b2e97f0_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Cols.vue?vue&type=template&id=71f85b06&
+// CONCATENATED MODULE: ./src/components/Cols.vue?vue&type=template&id=5b2e97f0&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Cols.vue?vue&type=script&lang=js&
 //
@@ -1365,8 +1365,15 @@ function Colsvue_type_script_lang_js_createStyles(vm) {
 	}
 	return s;
 }
-
-const Colsvue_type_script_lang_js_props = [...Colsvue_type_script_lang_js_boxStyle, ...Colsvue_type_script_lang_js_boxClass, ...Colsvue_type_script_lang_js_breakPoints, "gap", "fit"];
+const myClass = ["top"];
+const Colsvue_type_script_lang_js_props = [
+	...Colsvue_type_script_lang_js_boxStyle,
+	...Colsvue_type_script_lang_js_boxClass,
+	...Colsvue_type_script_lang_js_breakPoints,
+	"gap",
+	"fit",
+	...myClass
+];
 
 /* harmony default export */ var Colsvue_type_script_lang_js_ = ({
 	props: Colsvue_type_script_lang_js_props,
@@ -1377,9 +1384,8 @@ const Colsvue_type_script_lang_js_props = [...Colsvue_type_script_lang_js_boxSty
 		},
 		klass() {
 			let s = Object.assign(
-				{},
 				Colsvue_type_script_lang_js_createClass(this, "cols-component", Colsvue_type_script_lang_js_boxClass),
-				Colsvue_type_script_lang_js_createClass(this, "cols-component", Colsvue_type_script_lang_js_breakPoints)
+				Colsvue_type_script_lang_js_createClass(this, "cols-component", myClass)
 			);
 			return s;
 		}
@@ -1402,8 +1408,8 @@ var Colsvue_type_style_index_0_lang_scss_ = __webpack_require__("087e");
 
 var Cols_component = normalizeComponent(
   components_Colsvue_type_script_lang_js_,
-  Colsvue_type_template_id_71f85b06_render,
-  Colsvue_type_template_id_71f85b06_staticRenderFns,
+  Colsvue_type_template_id_5b2e97f0_render,
+  Colsvue_type_template_id_5b2e97f0_staticRenderFns,
   false,
   null,
   null,
@@ -1837,7 +1843,7 @@ function Horvue_type_script_lang_js_createStyles(vm) {
 	return s;
 }
 
-const myClass = [
+const Horvue_type_script_lang_js_myClass = [
 	"top",
 	"bottom",
 	"left",
@@ -1851,7 +1857,7 @@ const myClass = [
 	"evenly"
 ];
 
-const Horvue_type_script_lang_js_props = [...Horvue_type_script_lang_js_boxStyle, ...Horvue_type_script_lang_js_boxClass, ...myClass];
+const Horvue_type_script_lang_js_props = [...Horvue_type_script_lang_js_boxStyle, ...Horvue_type_script_lang_js_boxClass, ...Horvue_type_script_lang_js_myClass];
 
 /* harmony default export */ var Horvue_type_script_lang_js_ = ({
 	props: Horvue_type_script_lang_js_props,
@@ -1859,7 +1865,7 @@ const Horvue_type_script_lang_js_props = [...Horvue_type_script_lang_js_boxStyle
 		klass() {
 			let s = Object.assign(
 				{},
-				Horvue_type_script_lang_js_createClass(this, "hor-component", myClass),
+				Horvue_type_script_lang_js_createClass(this, "hor-component", Horvue_type_script_lang_js_myClass),
 				Horvue_type_script_lang_js_createClass(this, "hor-component", Horvue_type_script_lang_js_boxClass)
 			);
 			return s;

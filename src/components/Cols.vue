@@ -96,8 +96,15 @@ function createStyles(vm) {
 	}
 	return s;
 }
-
-const props = [...boxStyle, ...boxClass, ...breakPoints, "gap", "fit"];
+const myClass = ["top"];
+const props = [
+	...boxStyle,
+	...boxClass,
+	...breakPoints,
+	"gap",
+	"fit",
+	...myClass
+];
 
 export default {
 	props,
@@ -108,9 +115,8 @@ export default {
 		},
 		klass() {
 			let s = Object.assign(
-				{},
 				createClass(this, "cols-component", boxClass),
-				createClass(this, "cols-component", breakPoints)
+				createClass(this, "cols-component", myClass)
 			);
 			return s;
 		}
@@ -158,6 +164,14 @@ $breakpoints: xs 0px 100%, sm 576px 540px, md 768px 720px, lg 992px 960px,
 
 	&.cols-component--zero {
 		flex-basis: 0px;
+	}
+
+	&.cols-component--top {
+		align-items: start;
+	}
+
+	&.cols-component--bottom {
+		align-items: end;
 	}
 
 	&.cols-component--scroll {
