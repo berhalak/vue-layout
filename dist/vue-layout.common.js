@@ -574,7 +574,7 @@ var update = add("9d1bba44", content, true, {"sourceMap":false,"shadowMode":fals
 
 exports = module.exports = __webpack_require__("24fb")(false);
 // Module
-exports.push([module.i, ".box-component>*{height:100%}.box-component.box-component--grow{flex-grow:1}.box-component.box-component--shrink{flex-shrink:1}.box-component.box-component--expand{flex-grow:9999}.box-component.box-component--full{height:100%}.box-component.box-component--zero{flex-basis:0px}.box-component.box-component--scroll{overflow:auto;flex-basis:0px}", ""]);
+exports.push([module.i, ".box-component>*{height:100%}.box-component.box-component--grow{flex-grow:1}.box-component.box-component--shrink{flex-shrink:1}.box-component.box-component--expand{flex-grow:9999}.box-component.box-component--full{height:100%}.box-component.box-component--zero{flex-basis:0px}.box-component.box-component--scroll{overflow:auto;flex-basis:0px}@media only screen and (min-width:0px){.box-component--span-xs{grid-column:var(--box-span-xs)}}@media only screen and (min-width:576px){.box-component--span-sm{grid-column:var(--box-span-sm)}}@media only screen and (min-width:768px){.box-component--span-md{grid-column:var(--box-span-md)}}@media only screen and (min-width:992px){.box-component--span-lg{grid-column:var(--box-span-lg)}}@media only screen and (min-width:1100px){.box-component--span-xl{grid-column:var(--box-span-xl)}}@media only screen and (min-width:1332px){.box-component--span-xxl{grid-column:var(--box-span-xxl)}}@media only screen and (min-width:1632px){.box-component--span-rh{grid-column:var(--box-span-rh)}}@media only screen and (min-width:1832px){.box-component--span-fh{grid-column:var(--box-span-fh)}}@media only screen and (min-width:2232px){.box-component--span-qh{grid-column:var(--box-span-qh)}}@media only screen and (min-width:3032px){.box-component--span-kh{grid-column:var(--box-span-kh)}}", ""]);
 
 
 /***/ }),
@@ -1571,12 +1571,12 @@ var Rows_component = normalizeComponent(
 )
 
 /* harmony default export */ var Rows = (Rows_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"502b32a5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Box.vue?vue&type=template&id=a25ce6e6&
-var Boxvue_type_template_id_a25ce6e6_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"box-component",class:_vm.klass,style:(_vm.style),on:{"click":function($event){return _vm.$emit('click')}}},[_vm._t("default")],2)}
-var Boxvue_type_template_id_a25ce6e6_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"502b32a5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Box.vue?vue&type=template&id=47a36382&
+var Boxvue_type_template_id_47a36382_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"box-component",class:_vm.klass,style:(_vm.style),on:{"click":function($event){return _vm.$emit('click')}}},[_vm._t("default")],2)}
+var Boxvue_type_template_id_47a36382_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Box.vue?vue&type=template&id=a25ce6e6&
+// CONCATENATED MODULE: ./src/components/Box.vue?vue&type=template&id=47a36382&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Box.vue?vue&type=script&lang=js&
 //
@@ -1600,14 +1600,34 @@ const Boxvue_type_script_lang_js_breakPoints = [
 ];
 
 const Boxvue_type_script_lang_js_boxClass = ["grow", "expand", "full", "shrink", "zero", "scroll"];
-const Boxvue_type_script_lang_js_boxStyle = ["size", "width", "height", "span", "area"];
+let Boxvue_type_script_lang_js_boxStyle = ["size", "width", "height", "span", "area"];
+function firstUpper(/**  @type { String} */ t) {
+	return t[0].toUpperCase() + t.substring(1);
+}
+
+let boxSpan = Boxvue_type_script_lang_js_breakPoints.map(x => `span${firstUpper(x)}`);
+Boxvue_type_script_lang_js_boxStyle = Boxvue_type_script_lang_js_boxStyle.concat(boxSpan);
 
 function Boxvue_type_script_lang_js_createClass(vm, prefix, flags) {
 	let s = {};
-	for (let key of flags) {
+	for (let key of Boxvue_type_script_lang_js_breakPoints) {
 		if (vm[key] !== undefined && vm[key] !== false) {
 			s[`${prefix}--${key}`] = true;
 		}
+	}
+	return s;
+}
+
+function createSpans(vm, prefix) {
+	let s = {};
+	for (let b of Boxvue_type_script_lang_js_breakPoints) {
+		const spanValue = vm["span" + firstUpper(b)];
+		if (spanValue) {
+			s[prefix + "--span-" + b] = true;
+		}
+	}
+	if (vm.span) {
+		s[prefix + "--span-xs"] = true;
 	}
 	return s;
 }
@@ -1624,9 +1644,18 @@ function Boxvue_type_script_lang_js_createStyles(vm) {
 	if (vm.height !== undefined) {
 		s["height"] = vm.height;
 	}
+
 	if (vm.span) {
-		s["grid-column"] = "span " + vm.span;
+		s["--box-span-xs"] = "span " + vm.span;
 	}
+
+	for (let b of Boxvue_type_script_lang_js_breakPoints) {
+		const spanValue = vm["span" + firstUpper(b)];
+		if (spanValue) {
+			s["--box-span-" + b] = "span " + spanValue;
+		}
+	}
+
 	if (vm.area) {
 		s["grid-area"] = vm.area;
 	}
@@ -1642,7 +1671,8 @@ const params = [...Boxvue_type_script_lang_js_boxStyle];
 	computed: {
 		klass() {
 			let s = Boxvue_type_script_lang_js_createClass(this, "box-component", Boxvue_type_script_lang_js_boxClass);
-			return s;
+			let spans = createSpans(this, "box-component");
+			return Object.assign(s, spans);
 		},
 		style() {
 			let s = Boxvue_type_script_lang_js_createStyles(this);
@@ -1667,8 +1697,8 @@ var Boxvue_type_style_index_0_lang_scss_ = __webpack_require__("8b1b");
 
 var Box_component = normalizeComponent(
   components_Boxvue_type_script_lang_js_,
-  Boxvue_type_template_id_a25ce6e6_render,
-  Boxvue_type_template_id_a25ce6e6_staticRenderFns,
+  Boxvue_type_template_id_47a36382_render,
+  Boxvue_type_template_id_47a36382_staticRenderFns,
   false,
   null,
   null,

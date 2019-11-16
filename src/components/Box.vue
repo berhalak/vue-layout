@@ -19,14 +19,34 @@ const breakPoints = [
 ];
 
 const boxClass = ["grow", "expand", "full", "shrink", "zero", "scroll"];
-const boxStyle = ["size", "width", "height", "span", "area"];
+let boxStyle = ["size", "width", "height", "span", "area"];
+function firstUpper(/**  @type { String} */ t) {
+	return t[0].toUpperCase() + t.substring(1);
+}
+
+let boxSpan = breakPoints.map(x => `span${firstUpper(x)}`);
+boxStyle = boxStyle.concat(boxSpan);
 
 function createClass(vm, prefix, flags) {
 	let s = {};
-	for (let key of flags) {
+	for (let key of breakPoints) {
 		if (vm[key] !== undefined && vm[key] !== false) {
 			s[`${prefix}--${key}`] = true;
 		}
+	}
+	return s;
+}
+
+function createSpans(vm, prefix) {
+	let s = {};
+	for (let b of breakPoints) {
+		const spanValue = vm["span" + firstUpper(b)];
+		if (spanValue) {
+			s[prefix + "--span-" + b] = true;
+		}
+	}
+	if (vm.span) {
+		s[prefix + "--span-xs"] = true;
 	}
 	return s;
 }
@@ -43,9 +63,18 @@ function createStyles(vm) {
 	if (vm.height !== undefined) {
 		s["height"] = vm.height;
 	}
+
 	if (vm.span) {
-		s["grid-column"] = "span " + vm.span;
+		s["--box-span-xs"] = "span " + vm.span;
 	}
+
+	for (let b of breakPoints) {
+		const spanValue = vm["span" + firstUpper(b)];
+		if (spanValue) {
+			s["--box-span-" + b] = "span " + spanValue;
+		}
+	}
+
 	if (vm.area) {
 		s["grid-area"] = vm.area;
 	}
@@ -61,7 +90,8 @@ export default {
 	computed: {
 		klass() {
 			let s = createClass(this, "box-component", boxClass);
-			return s;
+			let spans = createSpans(this, "box-component");
+			return Object.assign(s, spans);
 		},
 		style() {
 			let s = createStyles(this);
@@ -100,6 +130,22 @@ export default {
 	&.box-component--scroll {
 		overflow: auto;
 		flex-basis: 0px;
+	}
+}
+
+$breakpoints: xs 0px 100%, sm 576px 540px, md 768px 720px, lg 992px 960px,
+	xl 1100px 1068px, xxl 1332px 1300px, rh 1632px 1600px, fh 1832px 1800px,
+	qh 2232px 2200px, kh 3032px 3000px !default;
+
+@each $breakpoint in $breakpoints {
+	$name: nth($breakpoint, 1);
+	$size: nth($breakpoint, 2);
+	$container: nth($breakpoint, 3);
+
+	@media only screen and (min-width: $size) {
+		&.box-component--span-#{$name} {
+			grid-column: var(--box-span-#{$name});
+		}
 	}
 }
 </style>

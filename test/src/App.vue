@@ -40,11 +40,11 @@
 				<item></item>
 			</cols>
 		</div>
-
+		<div>Spans</div>
 		<div style="height: 100px; border: 1px solid black">
 			<cols full xs="4">
 				<item></item>
-				<box span="2">
+				<box span-lg="2">
 					<item></item>
 				</box>
 				<item></item>
