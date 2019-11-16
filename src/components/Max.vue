@@ -40,9 +40,7 @@ function createStyles(vm) {
 	if (vm.size !== undefined) {
 		s["flex-basis"] = vm.size;
 	}
-	if (vm.width !== undefined) {
-		s["width"] = vm.width;
-	}
+
 	if (vm.height !== undefined) {
 		s["height"] = vm.height;
 	}
@@ -56,10 +54,13 @@ function createStyles(vm) {
 }
 
 export default {
-	props: [...props],
+	props: [...props, "width"],
 	computed: {
 		style() {
 			let res = createStyles(this);
+			if (this.width) {
+				res["max-width"] = this.width;
+			}
 			return res;
 		},
 		klass() {

@@ -2131,12 +2131,12 @@ var Breakpoint_component = normalizeComponent(
 )
 
 /* harmony default export */ var Breakpoint = (Breakpoint_component.exports);
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"502b32a5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Max.vue?vue&type=template&id=67cf2fc7&
-var Maxvue_type_template_id_67cf2fc7_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"max-component",class:_vm.klass,style:(_vm.style),on:{"click":function($event){return _vm.$emit('click')}}},[_vm._t("default")],2)}
-var Maxvue_type_template_id_67cf2fc7_staticRenderFns = []
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"502b32a5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Max.vue?vue&type=template&id=76176f4a&
+var Maxvue_type_template_id_76176f4a_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"max-component",class:_vm.klass,style:(_vm.style),on:{"click":function($event){return _vm.$emit('click')}}},[_vm._t("default")],2)}
+var Maxvue_type_template_id_76176f4a_staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Max.vue?vue&type=template&id=67cf2fc7&
+// CONCATENATED MODULE: ./src/components/Max.vue?vue&type=template&id=76176f4a&
 
 // CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Max.vue?vue&type=script&lang=js&
 //
@@ -2181,9 +2181,7 @@ function Maxvue_type_script_lang_js_createStyles(vm) {
 	if (vm.size !== undefined) {
 		s["flex-basis"] = vm.size;
 	}
-	if (vm.width !== undefined) {
-		s["width"] = vm.width;
-	}
+
 	if (vm.height !== undefined) {
 		s["height"] = vm.height;
 	}
@@ -2197,10 +2195,13 @@ function Maxvue_type_script_lang_js_createStyles(vm) {
 }
 
 /* harmony default export */ var Maxvue_type_script_lang_js_ = ({
-	props: [...Maxvue_type_script_lang_js_props],
+	props: [...Maxvue_type_script_lang_js_props, "width"],
 	computed: {
 		style() {
 			let res = Maxvue_type_script_lang_js_createStyles(this);
+			if (this.width) {
+				res["max-width"] = this.width;
+			}
 			return res;
 		},
 		klass() {
@@ -2229,8 +2230,8 @@ var Maxvue_type_style_index_0_lang_scss_ = __webpack_require__("6813");
 
 var Max_component = normalizeComponent(
   components_Maxvue_type_script_lang_js_,
-  Maxvue_type_template_id_67cf2fc7_render,
-  Maxvue_type_template_id_67cf2fc7_staticRenderFns,
+  Maxvue_type_template_id_76176f4a_render,
+  Maxvue_type_template_id_76176f4a_staticRenderFns,
   false,
   null,
   null,
