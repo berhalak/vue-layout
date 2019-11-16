@@ -11,3 +11,10 @@ Vue.use(Layout);
 // or
 
 Vue.use(Layout, "v-"); // prefix
+
+Components:
+hor, ver, cols, rows, cen, box, wrap, mas
+
+Masonary component uses a modified version of a vue-masonry-css 
+
+https://github.com/paulcollett/vue-masonry-css

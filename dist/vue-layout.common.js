@@ -251,6 +251,16 @@ function toComment(sourceMap) {
 
 /***/ }),
 
+/***/ "2c18":
+/***/ (function(module, exports, __webpack_require__) {
+
+exports = module.exports = __webpack_require__("24fb")(false);
+// Module
+exports.push([module.i, ".mas-component>div>*+*{margin-top:var(--mas-gap,0)}.mas-component.mas-component--grow{flex-grow:1}.mas-component.mas-component--shrink{flex-shrink:1}.mas-component.mas-component--expand{flex-grow:9999}.mas-component.mas-component--full{height:100%}.mas-component.mas-component--zero{flex-basis:0px}.mas-component.mas-component--top{align-items:start}.mas-component.mas-component--bottom{align-items:end}.mas-component.mas-component--scroll{overflow:auto;flex-basis:0px}", ""]);
+
+
+/***/ }),
+
 /***/ "3f8d":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -719,6 +729,21 @@ exports.push([module.i, ".ver-component{display:flex;flex-direction:column}.ver-
 
 /***/ }),
 
+/***/ "aa0d":
+/***/ (function(module, exports, __webpack_require__) {
+
+// style-loader: Adds some css to the DOM by adding a <style> tag
+
+// load the styles
+var content = __webpack_require__("2c18");
+if(typeof content === 'string') content = [[module.i, content, '']];
+if(content.locals) module.exports = content.locals;
+// add the styles to the DOM
+var add = __webpack_require__("499e").default
+var update = add("1034c05e", content, true, {"sourceMap":false,"shadowMode":false});
+
+/***/ }),
+
 /***/ "b82d":
 /***/ (function(module, exports, __webpack_require__) {
 
@@ -741,6 +766,17 @@ exports = module.exports = __webpack_require__("24fb")(false);
 // Module
 exports.push([module.i, ".grid-component{display:grid}@media only screen and (min-width:0px){.grid-component.grid-component--xs{grid:var(--grid-component--xs)}}@media only screen and (min-width:576px){.grid-component.grid-component--sm{grid:var(--grid-component--sm)}}@media only screen and (min-width:768px){.grid-component.grid-component--md{grid:var(--grid-component--md)}}@media only screen and (min-width:992px){.grid-component.grid-component--lg{grid:var(--grid-component--lg)}}@media only screen and (min-width:1100px){.grid-component.grid-component--xl{grid:var(--grid-component--xl)}}@media only screen and (min-width:1332px){.grid-component.grid-component--xxl{grid:var(--grid-component--xxl)}}@media only screen and (min-width:1632px){.grid-component.grid-component--rh{grid:var(--grid-component--rh)}}@media only screen and (min-width:1832px){.grid-component.grid-component--fh{grid:var(--grid-component--fh)}}@media only screen and (min-width:2232px){.grid-component.grid-component--qh{grid:var(--grid-component--qh)}}@media only screen and (min-width:3032px){.grid-component.grid-component--kh{grid:var(--grid-component--kh)}}.grid-component.grid-component--grow{flex-grow:1}.grid-component.grid-component--shrink{flex-shrink:1}.grid-component.grid-component--expand{flex-grow:9999}.grid-component.grid-component--zero{flex-basis:0px}.grid-component.grid-component--scroll{overflow:auto;flex-basis:0px}.grid-component.grid-component--full{height:100%}", ""]);
 
+
+/***/ }),
+
+/***/ "d9bb":
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_dist_cjs_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Mas_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__("aa0d");
+/* harmony import */ var _node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_dist_cjs_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Mas_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_dist_cjs_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Mas_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0__);
+/* unused harmony reexport * */
+ /* unused harmony default export */ var _unused_webpack_default_export = (_node_modules_vue_style_loader_index_js_ref_8_oneOf_1_0_node_modules_css_loader_dist_cjs_js_ref_8_oneOf_1_1_node_modules_vue_loader_lib_loaders_stylePostLoader_js_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_2_node_modules_postcss_loader_src_index_js_ref_8_oneOf_1_3_node_modules_sass_loader_dist_cjs_js_ref_8_oneOf_1_4_node_modules_cache_loader_dist_cjs_js_ref_0_0_node_modules_vue_loader_lib_index_js_vue_loader_options_Mas_vue_vue_type_style_index_0_lang_scss___WEBPACK_IMPORTED_MODULE_0___default.a); 
 
 /***/ }),
 
@@ -2308,7 +2344,427 @@ var Wrap_component = normalizeComponent(
 )
 
 /* harmony default export */ var Wrap = (Wrap_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"502b32a5-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Mas.vue?vue&type=template&id=5433895e&
+var Masvue_type_template_id_5433895e_render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('Masonry',{staticClass:"mas-component",class:_vm.klass,style:(_vm.style),attrs:{"cols":_vm.mcols,"gutter":_vm.mgutter}},[_vm._t("default")],2)}
+var Masvue_type_template_id_5433895e_staticRenderFns = []
+
+
+// CONCATENATED MODULE: ./src/components/Mas.vue?vue&type=template&id=5433895e&
+
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Masonry.vue?vue&type=script&lang=js&
+
+// the component name `<masonry />`
+// can be overridden with `Vue.use(Masonry, { name: 'the-masonry' });`
+const componentName = "masonry";
+
+const Masonryvue_type_script_lang_js_props = {
+	tag: {
+		type: [String],
+		default: "div"
+	},
+	cols: {
+		type: [Object, Number, String],
+		default: 2
+	},
+	gutter: {
+		type: [Object, Number, String],
+		default: 0
+	},
+	css: {
+		type: [Boolean],
+		default: true
+	},
+	columnTag: {
+		type: [String],
+		default: "div"
+	},
+	columnClass: {
+		type: [String, Array, Object],
+		default: () => []
+	},
+	columnAttr: {
+		type: [Object],
+		default: () => ({})
+	}
+};
+
+// Get the resulting value from  `:col=` prop
+// based on the window width
+const breakpointValue = (mixed, windowWidth) => {
+	const valueAsNum = parseInt(mixed);
+
+	if (valueAsNum > -1) {
+		return mixed;
+	} else if (typeof mixed !== "object") {
+		return 0;
+	}
+
+	let matchedBreakpoint = Infinity;
+	let matchedValue = mixed.default || 0;
+
+	for (let k in mixed) {
+		const breakpoint = parseInt(k);
+		const breakpointValRaw = mixed[breakpoint];
+		const breakpointVal = parseInt(breakpointValRaw);
+
+		if (isNaN(breakpoint) || isNaN(breakpointVal)) {
+			continue;
+		}
+
+		const isNewBreakpoint =
+			windowWidth <= breakpoint && breakpoint < matchedBreakpoint;
+
+		if (isNewBreakpoint) {
+			matchedBreakpoint = breakpoint;
+			matchedValue = breakpointValRaw;
+		}
+	}
+
+	return matchedValue;
+};
+
+/* harmony default export */ var Masonryvue_type_script_lang_js_ = ({
+	props: Masonryvue_type_script_lang_js_props,
+
+	data() {
+		return {
+			displayColumns: 2,
+			displayGutter: 0
+		};
+	},
+
+	mounted() {
+		this.$nextTick(() => {
+			this.reCalculate();
+		});
+
+		// Bind resize handler to page
+		if (window) {
+			window.addEventListener("resize", this.reCalculate);
+		}
+	},
+
+	updated() {
+		this.$nextTick(() => {
+			this.reCalculate();
+		});
+	},
+
+	beforeDestroy() {
+		if (window) {
+			window.removeEventListener("resize", this.reCalculate);
+		}
+	},
+
+	methods: {
+		// Recalculate how many columns to display based on window width
+		// and the value of the passed `:cols=` prop
+		reCalculate() {
+			const previousWindowWidth = this.windowWidth;
+
+			this.windowWidth = (window ? window.innerWidth : null) || Infinity;
+
+			// Window resize events get triggered on page height
+			// change which when loading the page can result in multiple
+			// needless calculations. We prevent this here.
+			if (previousWindowWidth === this.windowWidth) {
+				return;
+			}
+
+			this._reCalculateColumnCount(this.windowWidth);
+
+			this._reCalculateGutterSize(this.windowWidth);
+		},
+
+		_reCalculateGutterSize(windowWidth) {
+			this.displayGutter = breakpointValue(this.gutter, windowWidth);
+		},
+
+		_reCalculateColumnCount(windowWidth) {
+			let newColumns = breakpointValue(this.cols, windowWidth);
+
+			// Make sure we can return a valid value
+			newColumns = Math.max(1, Number(newColumns) || 0);
+
+			this.displayColumns = newColumns;
+		},
+
+		_getChildItemsInColumnsArray() {
+			const columns = [];
+			let childItems = this.$slots.default || [];
+
+			// This component does not work with a child <transition-group /> ..yet,
+			// so for now we think it may be helpful to ignore until we can find a way for support
+			if (
+				childItems.length === 1 &&
+				childItems[0].componentOptions &&
+				childItems[0].componentOptions.tag == "transition-group"
+			) {
+				childItems = childItems[0].componentOptions.children;
+			}
+
+			// Loop through child elements
+			for (
+				let i = 0, visibleItemI = 0;
+				i < childItems.length;
+				i++, visibleItemI++
+			) {
+				// skip Vue elements without tags, which includes
+				// whitespace elements and also plain text
+				if (!childItems[i].tag) {
+					visibleItemI--;
+
+					continue;
+				}
+
+				// Get the column index the child item will end up in
+				const columnIndex = visibleItemI % this.displayColumns;
+
+				if (!columns[columnIndex]) {
+					columns[columnIndex] = [];
+				}
+
+				columns[columnIndex].push(childItems[i]);
+			}
+
+			return columns;
+		}
+	},
+
+	render(createElement) {
+		const columnsContainingChildren = this._getChildItemsInColumnsArray();
+		const isGutterSizeUnitless =
+			parseInt(this.displayGutter) === this.displayGutter * 1;
+		const gutterSizeWithUnit = isGutterSizeUnitless
+			? `${this.displayGutter}px`
+			: this.displayGutter;
+
+		const columnStyle = {
+			boxSizing: "border-box",
+			backgroundClip: "padding-box",
+			width: `${100 / this.displayColumns}%`,
+			border: "0 solid transparent",
+			borderLeftWidth: gutterSizeWithUnit
+		};
+
+		const columns = columnsContainingChildren.map((children, index) => {
+			/// Create column element and inject the children
+			return createElement(
+				this.columnTag,
+				{
+					key: index + "-" + columnsContainingChildren.length,
+					style: this.css ? columnStyle : null,
+					class: this.columnClass,
+					attrs: this.columnAttr
+				},
+				children
+			); // specify child items here
+		});
+
+		const containerStyle = {
+			display: ["-webkit-box", "-ms-flexbox", "flex"],
+			marginLeft: `-${gutterSizeWithUnit}`
+		};
+
+		// Return wrapper with columns
+		return createElement(
+			this.tag, // tag name
+			this.css ? { style: containerStyle } : null, // element options
+			columns // column vue elements
+		);
+	}
+});
+
+// CONCATENATED MODULE: ./src/components/Masonry.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_Masonryvue_type_script_lang_js_ = (Masonryvue_type_script_lang_js_); 
+// CONCATENATED MODULE: ./src/components/Masonry.vue
+var Masonry_render, Masonry_staticRenderFns
+
+
+
+
+/* normalize component */
+
+var Masonry_component = normalizeComponent(
+  components_Masonryvue_type_script_lang_js_,
+  Masonry_render,
+  Masonry_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var Masonry = (Masonry_component.exports);
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Mas.vue?vue&type=script&lang=js&
+//
+//
+//
+//
+//
+//
+
+
+
+const Masvue_type_script_lang_js_breakPoints = [
+	"xs",
+	"sm",
+	"md",
+	"lg",
+	"xl",
+	"xxl",
+	"rh",
+	"fh",
+	"qh",
+	"kh"
+];
+
+const breaks = {
+	xs: "0px",
+	sm: "576px",
+	md: "768px",
+	lg: "992px",
+	xl: "1100px",
+	xxl: "1332px",
+	rh: "1632px",
+	fh: "1832px",
+	qh: "2232px",
+	kh: "3032px"
+};
+
+const Masvue_type_script_lang_js_boxClass = ["grow", "expand", "full", "shrink", "zero", "scroll"];
+const Masvue_type_script_lang_js_boxStyle = ["size", "width", "height", "span", "area"];
+
+function Masvue_type_script_lang_js_createClass(vm, prefix, flags) {
+	let s = {};
+
+	for (let key of flags) {
+		if (vm[key] !== undefined && vm[key] !== false) {
+			s[`${prefix}--${key}`] = true;
+		}
+	}
+	return s;
+}
+
+function Masvue_type_script_lang_js_createStyles(vm) {
+	let s = {};
+
+	if (vm.size !== undefined) {
+		s["flex-basis"] = vm.size;
+	}
+	if (vm.width !== undefined) {
+		s["width"] = vm.width;
+	}
+	if (vm.height !== undefined) {
+		s["height"] = vm.height;
+	}
+	if (vm.span) {
+		s["grid-column"] = "span " + vm.span;
+	}
+	if (vm.area) {
+		s["grid-area"] = vm.area;
+	}
+	if (vm.gap) {
+		s["--mas-gap"] = vm.gap;
+	}
+	return s;
+}
+const Masvue_type_script_lang_js_myClass = ["top"];
+const Masvue_type_script_lang_js_props = [
+	...Masvue_type_script_lang_js_boxStyle,
+	...Masvue_type_script_lang_js_boxClass,
+	...Masvue_type_script_lang_js_breakPoints,
+	"gap",
+	"fit",
+	...Masvue_type_script_lang_js_myClass
+];
+
+/* harmony default export */ var Masvue_type_script_lang_js_ = ({
+	props: Masvue_type_script_lang_js_props,
+	components: {
+		Masonry: Masonry
+	},
+	computed: {
+		mcols() {
+			let def = "1";
+			let list = [];
+			for (let b in breaks) {
+				if (this[b]) {
+					let size = parseInt(breaks[b].replace("px", ""));
+					list.push({ size, cols: parseInt(this[b]) });
+				}
+			}
+			list.reverse();
+
+			if (list.length == 0) {
+				return 1;
+			}
+
+			let result = {};
+
+			let last = null;
+
+			for (let item of list) {
+				if (last == null) {
+					result["default"] = item.cols;
+					last = item.size;
+				} else {
+					result[last] = item.cols;
+					last = item.size;
+				}
+			}
+
+			return result;
+		},
+		mgutter() {
+			if (this.gap) {
+				return this.gap;
+			}
+			return "0px";
+		},
+		style() {
+			let res = Object.assign({}, Masvue_type_script_lang_js_createStyles(this));
+			return res;
+		},
+		klass() {
+			let s = Object.assign(
+				Masvue_type_script_lang_js_createClass(this, "mas-component", Masvue_type_script_lang_js_boxClass),
+				Masvue_type_script_lang_js_createClass(this, "mas-component", Masvue_type_script_lang_js_myClass)
+			);
+			return s;
+		}
+	}
+});
+
+// CONCATENATED MODULE: ./src/components/Mas.vue?vue&type=script&lang=js&
+ /* harmony default export */ var components_Masvue_type_script_lang_js_ = (Masvue_type_script_lang_js_); 
+// EXTERNAL MODULE: ./src/components/Mas.vue?vue&type=style&index=0&lang=scss&
+var Masvue_type_style_index_0_lang_scss_ = __webpack_require__("d9bb");
+
+// CONCATENATED MODULE: ./src/components/Mas.vue
+
+
+
+
+
+
+/* normalize component */
+
+var Mas_component = normalizeComponent(
+  components_Masvue_type_script_lang_js_,
+  Masvue_type_template_id_5433895e_render,
+  Masvue_type_template_id_5433895e_staticRenderFns,
+  false,
+  null,
+  null,
+  null
+  
+)
+
+/* harmony default export */ var Mas = (Mas_component.exports);
 // CONCATENATED MODULE: ./src/index.ts
+
 
 
 
@@ -2330,6 +2786,7 @@ var components = {
     Ver: Ver,
     Max: Max,
     Wrap: Wrap,
+    Mas: Mas,
     Breakpoint: Breakpoint
 };
 
@@ -2353,6 +2810,7 @@ var components = {
 /* concated harmony reexport Max */__webpack_require__.d(__webpack_exports__, "Max", function() { return Max; });
 /* concated harmony reexport Ver */__webpack_require__.d(__webpack_exports__, "Ver", function() { return Ver; });
 /* concated harmony reexport Wrap */__webpack_require__.d(__webpack_exports__, "Wrap", function() { return Wrap; });
+/* concated harmony reexport Mas */__webpack_require__.d(__webpack_exports__, "Mas", function() { return Mas; });
 /* concated harmony reexport Breakpoint */__webpack_require__.d(__webpack_exports__, "Breakpoint", function() { return Breakpoint; });
 
 

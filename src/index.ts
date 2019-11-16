@@ -8,6 +8,7 @@ import Ver from "./components/Ver.vue";
 import Breakpoint from "./components/Breakpoint.vue";
 import Max from "./components/Max.vue";
 import Wrap from "./components/Wrap.vue";
+import Mas from "./components/Mas.vue";
 
 import Vue from "vue";
 
@@ -21,6 +22,7 @@ let components = {
 	Ver,
 	Max,
 	Wrap,
+	Mas,
 	Breakpoint
 }
 
@@ -34,6 +36,7 @@ export {
 	Max,
 	Ver,
 	Wrap,
+	Mas,
 	Breakpoint
 }
 

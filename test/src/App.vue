@@ -1,5 +1,15 @@
 <template>
 	<max>
+		Masonary
+		<div style="height: 300px; border: 1px solid black">
+			<mas xs="3" lg="4" gap="1rem">
+				<item style="height: 80px"></item>
+				<item style="height: 180px"></item>
+				<item style="height: 50px"></item>
+				<item style="height: 200px"></item>
+				<item style="height: 100px"></item>
+			</mas>
+		</div>Hor
 		<div style="height: 100px; border: 1px solid black">
 			<hor full>
 				<box size="200px" grow>
