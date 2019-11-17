@@ -153,7 +153,7 @@ export default {
 	}
 
 	&.hor-component--gap > * + * {
-		margin-top: var(--hor-gap);
+		margin-left: var(--hor-gap);
 	}
 
 	&.hor-component--scroll {
