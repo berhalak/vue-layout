@@ -1,168 +1,32 @@
 <template>
-	<div class="rows-component" :style="style" :class="klass" @click="$emit('click')">
+	<div class="rows-component" :class="className" @click="$emit('click')">
 		<slot />
 	</div>
 </template>
 
 <script>
-const breakPoints = [
-	"xs",
-	"sm",
-	"md",
-	"lg",
-	"xl",
-	"xxl",
-	"rh",
-	"fh",
-	"qh",
-	"kh"
-];
-
-const boxClass = ["grow", "expand", "full", "shrink", "zero", "scroll"];
-const boxStyle = ["size", "width", "height", "span", "area"];
-
-function createTracks(vm) {
-	let res = {};
-	for (const size of breakPoints) {
-		if (vm[size]) {
-			/** @type { String } */
-			let value = "" + vm[size] + "";
-
-			// number of columns
-			if (value.match(/^\d+$/)) {
-				value = `repeat(auto-fill, minmax(calc(100% * 1 / ${value} - ${vm.gap ||
-					"0px"}), 1fr))`;
-			} else if (!value.includes(" ")) {
-				// repeat single size
-				if (value.includes("/")) {
-					// calcaulte size if there is an expression
-					value = value.replace(
-						/(\d+)\/(\d+)/g,
-						`calc(100% * $1 / $2 - ${vm.gap || "0px"})`
-					);
-				}
-				value = `repeat(auto-fill, minmax(${value}, 1fr))`;
-			} else {
-				// multiple sizes specified
-				let columnCount = value.split(" ").length;
-				let gap = vm.gap || "0px";
-				let fullSize = `calc(100% - ${gap} * ${columnCount - 1})`;
-				if (value.includes("/")) {
-					// just calculate math
-					value = value.replace(
-						/(\d+)\/(\d+)/g,
-						`calc(${fullSize} * $1 / $2)`
-					);
-				}
-			}
-			res["--" + size] = value;
-		}
-	}
-
-	res["grid-gap"] = vm.gap || "0px";
-	return res;
-}
-
-function createClass(vm, prefix, flags) {
-	let s = {};
-
-	for (let key of flags) {
-		if (vm[key] !== undefined && vm[key] !== false) {
-			s[`${prefix}--${key}`] = true;
-		}
-	}
-	return s;
-}
-
-function createStyles(vm) {
-	let s = {};
-
-	if (vm.size !== undefined) {
-		s["flex-basis"] = vm.size;
-	}
-	if (vm.width !== undefined) {
-		s["width"] = vm.width;
-	}
-	if (vm.height !== undefined) {
-		s["height"] = vm.height;
-	}
-	if (vm.span) {
-		s["grid-column"] = "span " + vm.span;
-	}
-	if (vm.area) {
-		s["grid-area"] = vm.area;
-	}
-	return s;
-}
-
-const props = [...boxStyle, ...boxClass, ...breakPoints, "gap"];
-
-export default {
-	props,
-	computed: {
-		style() {
-			let s = Object.assign({}, createStyles(this), createTracks(this));
-
-			return s;
+import { build, Box } from "./core";
+export default build(Box, {
+	map: {
+		can(name) {
+			return name == "rows";
 		},
-		klass() {
-			let s = Object.assign(
-				{},
-				createClass(this, "rows-component", boxClass),
-				createClass(this, "rows-component", breakPoints)
-			);
-			return s;
+		has(b, name, v) {
+			if (b == "xs") {
+				// rows has a default auto row
+				return true;
+			}
+			return v[b] !== undefined && v[b] !== false;
+		},
+		get(b, name, v) {
+			return v[b] || "auto";
 		}
 	}
-};
+});
 </script>
 
-<style lang="scss">
-$breakpoints: xs 0px 100%, sm 576px 540px, md 768px 720px, lg 992px 960px,
-	xl 1100px 1068px, xxl 1332px 1300px, rh 1632px 1600px, fh 1832px 1800px,
-	qh 2232px 2200px, kh 3032px 3000px !default;
-
-$name: rows;
-
-.#{$name}-component {
+<style lang="css">
+.rows-component {
 	display: grid;
-
-	@each $breakpoint in $breakpoints {
-		$name: nth($breakpoint, 1);
-		$size: nth($breakpoint, 2);
-		$container: nth($breakpoint, 3);
-
-		@media only screen and (min-width: $size) {
-			&.#{$name}-component--#{$name} {
-				grid-template-rows: var(--#{$name});
-				grid-auto-flow: column;
-			}
-		}
-	}
-
-	&.#{$name}-component--grow {
-		flex-grow: 1;
-	}
-
-	&.#{$name}-component--shrink {
-		flex-shrink: 1;
-	}
-
-	&.#{$name}-component--expand {
-		flex-grow: 9999;
-	}
-
-	&.#{$name}-component--full {
-		height: 100%;
-	}
-
-	&.#{$name}-component--zero {
-		flex-basis: 0px;
-	}
-
-	&.#{$name}-component--scroll {
-		overflow: auto;
-		flex-basis: 0px;
-	}
 }
 </style>

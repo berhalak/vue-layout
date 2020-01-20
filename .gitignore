@@ -11,6 +11,8 @@ pids
 *.seed
 *.pid.lock
 .gitpod.yml
+yarn.lock
+package-lock.json
 
 .out/
 
