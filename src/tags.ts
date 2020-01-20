@@ -5,7 +5,8 @@ let out: any = {};
 
 
 for (let c of ['box', "hor", "lane", "ver", "cols", "rows", "grid", "cen", "wrap", "fill", "max"]) {
-    out[c] = []
+    const att: string[] = [];
+    out[c] = { attributes: att }
     for (let prop of Object.keys(props)) {
         if (['cols', 'rows', 'grid'].includes(c)) {
 
@@ -17,7 +18,7 @@ for (let c of ['box', "hor", "lane", "ver", "cols", "rows", "grid", "cen", "wrap
         if (c == prop) {
             continue;
         }
-        out[c].push(prop);
+        att.push(prop);
     }
 }
 
