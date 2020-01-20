@@ -9,6 +9,8 @@ import Breakpoint from "./components/Breakpoint.vue";
 import Max from "./components/Max.vue";
 import Wrap from "./components/Wrap.vue";
 import Mas from "./components/Mas.vue";
+import Lane from "./components/Lane.vue";
+import Fill from "./components/Fill.vue";
 
 import Vue from "vue";
 
@@ -21,7 +23,9 @@ let components = {
 	Hor,
 	Ver,
 	Max,
+	Lane,
 	Wrap,
+	Fill,
 	Mas,
 	Breakpoint
 }
@@ -35,6 +39,8 @@ export {
 	Hor,
 	Max,
 	Ver,
+	Fill,
+	Lane,
 	Wrap,
 	Mas,
 	Breakpoint

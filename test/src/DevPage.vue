@@ -1,9 +1,11 @@
 <template>
 	<div>
 		<h1>dev</h1>
-		<ver height="400px" class="b" scroll>
-			<item v-for="i in 100">{{i}}</item>
-		</ver>
+		<fill line height="300px">
+			<item>a</item>
+			<item>a</item>
+			<item>a</item>
+		</fill>
 	</div>
 </template>
 

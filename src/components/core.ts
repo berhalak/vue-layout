@@ -23,6 +23,7 @@ const respons = ["size", "width", "height", "hide", "show", "col", "span", "area
 	"cols",
 	"rows",
 	"pass",
+	"fill",
 	"h100",
 	"w100",
 	"between",
@@ -105,8 +106,12 @@ function comp(buildClass: Builder, def: any) {
 	return {
 		props: def ? Object.assign({}, props, def) : props,
 		computed: {
-			className() {
-				return classBuilder(this, buildClass, def?.map);
+			className(): any {
+				const name = classBuilder(this, buildClass, def?.map);
+				return {
+					"box-element--fill": isOn((this as any).fill),
+					[name]: true
+				}
 			}
 		}
 	}
@@ -151,6 +156,7 @@ function evalSizes(text: string) {
 
 
 export const Box = {
+
 	build() {
 		function isHor() {
 			return has("hor") || has("rows")
@@ -159,6 +165,7 @@ export const Box = {
 		function isVer() {
 			return !isHor();
 		}
+
 
 		if (has('w100')) {
 			media({
@@ -351,11 +358,7 @@ export const Box = {
 			}
 		}
 
-		if (has('line')) {
-			media({
-				alignItems: 'baseline'
-			})
-		}
+
 
 		if (has('middle')) {
 			if (isHor()) {
@@ -482,6 +485,13 @@ export const Box = {
 				gridTemplateAreas,
 				gridTemplateRows,
 				gridTemplateColumns,
+			})
+		}
+
+
+		if (has('line')) {
+			media({
+				alignItems: 'baseline'
 			})
 		}
 	}

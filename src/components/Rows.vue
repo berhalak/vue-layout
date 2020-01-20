@@ -1,5 +1,5 @@
 <template>
-	<div class="rows-component" :class="className" @click="$emit('click')">
+	<div class="box-element rows-component" :class="className" @click="$emit('click')">
 		<slot />
 	</div>
 </template>
@@ -28,5 +28,8 @@ export default build(Box, {
 <style lang="css">
 .rows-component {
 	display: grid;
+}
+.box-element.box-element--fill > * {
+	flex-grow: 1;
 }
 </style>

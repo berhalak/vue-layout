@@ -1,5 +1,5 @@
 <template>
-	<div class="box-component" :class="className" @click="$emit('click')">
+	<div class="box-element box-component" :class="className" @click="$emit('click')">
 		<slot />
 	</div>
 </template>
@@ -13,5 +13,8 @@ export default build(Box);
 .box-component {
 	display: flex;
 	flex-direction: column;
+}
+.box-element.box-element--fill > * {
+	flex-grow: 1;
 }
 </style>

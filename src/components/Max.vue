@@ -1,5 +1,5 @@
 <template>
-	<div class="max-component" :class="className" @click="$emit('click')">
+	<div class="box-element max-component" :class="className" @click="$emit('click')">
 		<slot />
 	</div>
 </template>
@@ -23,5 +23,8 @@ $breakpoints: xs 0px 100%, sm 576px 540px, md 768px 720px, lg 992px 960px,
 			max-width: $max;
 		}
 	}
+}
+.box-element.box-element--fill > * {
+	flex-grow : 1;
 }
 </style>

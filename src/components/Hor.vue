@@ -1,5 +1,5 @@
 <template>
-	<div class="hor-component" :class="className" @click="$emit('click')">
+	<div class="box-element hor-component" :class="className" @click="$emit('click')">
 		<slot />
 	</div>
 </template>
@@ -18,5 +18,8 @@ export default build(Box, {
 .hor-component {
 	display: flex;
 	flex-direction: row;
+}
+.box-element.box-element--fill > * {
+	flex-grow : 1;
 }
 </style>

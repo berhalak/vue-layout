@@ -1,5 +1,5 @@
 <template>
-	<div class="box-element cen-component" :class="className" @click="$emit('click')">
+	<div class="box-element fill-component" :class="className" @click="$emit('click')">
 		<slot />
 	</div>
 </template>
@@ -7,18 +7,19 @@
 <script>
 import { build, Box } from "./core";
 export default build(Box, {
-	center: {
+	fill: {
 		type: String,
 		default: ""
 	}
 });
 </script>
+
 <style lang="css">
-.cen-component {
+.fill-component {
 	display: flex;
-	flex-direction: column;
+	flex-direction: row;
 }
 .box-element.box-element--fill > * {
-	flex-grow : 1;
+	flex-grow: 1;
 }
 </style>
