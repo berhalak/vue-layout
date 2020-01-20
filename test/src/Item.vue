@@ -1,6 +1,6 @@
 <template>
 	<div class="item">
-		<div class="item_inner">box</div>
+		<div class="item_inner"></div>
 	</div>
 </template>
 
@@ -9,8 +9,9 @@
 	padding: 10px;
 	border: 1px solid lightblue;
 	.item_inner {
-		height: 100%;
 		background: red;
+		padding: 5px;
+		height: 100%;
 	}
 }
 </style>

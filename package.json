@@ -1,49 +1,53 @@
 {
-  "name": "@berhalak/vue-layout",
-  "version": "0.0.20",
-  "private": false,
-  "description": "vue layout components",
-  "main": "dist/vue-layout.umd.js",
-  "types": "src/index.d.ts",
-  "repository": {
-    "type": "git",
-    "url": "git+https://github.com/berhalak/vue-layout.git"
-  },
-  "keywords": [
-    "vue",
-    "vue-component",
-    "flexbox",
-    "grid",
-    "responsive",
-    "layout",
-    "components"
-  ],
-  "author": "berhalak",
-  "license": "ISC",
-  "bugs": {
-    "url": "https://github.com/berhalak/vue-layout/issues"
-  },
-  "homepage": "https://github.com/berhalak/vue-layout#readme",
-  "scripts": {
-    "serve": "vue-cli-service serve",
-    "build": "vue-cli-service build --target lib --name vue-layout ./src/index.ts",
-    "deploy": "npm run build && npm publish --access public"
-  },
-  "devDependencies": {
-    "@vue/cli-plugin-typescript": "^4.0.5",
-    "@vue/cli-service": "^4.0.5",
-    "node-sass": "^4.13.0",
-    "sass-loader": "^8.0.0",
-    "typescript": "^3.7.2",
-    "vue": "^2.6.10",
-    "vue-template-compiler": "^2.6.10"
-  },
-  "postcss": {
-    "plugins": {
-      "autoprefixer": {}
-    }
-  },
-  "browserslist": [
-    "last 1 Safari versions and last 2 Chrome versions"
-  ]
+	"name": "@berhalak/vue-layout",
+	"version": "0.1.0",
+	"private": false,
+	"description": "vue layout components",
+	"main": "dist/vue-layout.umd.js",
+	"types": "src/index.d.ts",
+	"repository": {
+		"type": "git",
+		"url": "git+https://github.com/berhalak/vue-layout.git"
+	},
+	"keywords": [
+		"vue",
+		"vue-component",
+		"flexbox",
+		"grid",
+		"responsive",
+		"layout",
+		"components"
+	],
+	"author": "berhalak",
+	"license": "ISC",
+	"bugs": {
+		"url": "https://github.com/berhalak/vue-layout/issues"
+	},
+	"homepage": "https://github.com/berhalak/vue-layout#readme",
+	"scripts": {
+		"serve": "vue-cli-service serve",
+		"build": "vue-cli-service build --target lib --name vue-layout ./src/index.ts",
+		"deploy": "npm run build && npm publish --access public"
+	},
+	"dependencies": {
+		"aphrodite": "^2.4.0",
+		"vue": "^2.6.10"
+	},
+	"devDependencies": {
+		"@vue/cli-plugin-typescript": "^4.0.5",
+		"@vue/cli-service": "^4.0.5",
+		"node-sass": "^4.13.0",
+		"sass-loader": "^8.0.0",
+		"typescript": "^3.7.2",
+		"@types/aphrodite": "^2.0.0",
+		"vue-template-compiler": "^2.6.10"
+	},
+	"postcss": {
+		"plugins": {
+			"autoprefixer": {}
+		}
+	},
+	"browserslist": [
+		"last 1 Safari versions and last 2 Chrome versions"
+	]
 }

@@ -1,138 +1,53 @@
 <template>
-	<max>
-		Masonary
-		<div style="height: 300px; border: 1px solid black">
-			<mas xs="3" lg="4" gap="1rem">
-				<item style="height: 80px"></item>
-				<item style="height: 180px"></item>
-				<item style="height: 50px"></item>
-				<item style="height: 200px"></item>
-				<item style="height: 100px"></item>
-			</mas>
-		</div>Hor
-		<div style="height: 100px; border: 1px solid black">
-			<hor full>
-				<box size="200px" grow>
-					<div style="background: red">img</div>
-				</box>
-				<box size="300px" expand>
-					<cen>
-						<span>text</span>
-					</cen>
-				</box>
-			</hor>
-		</div>
-		<div style="height: 100px; border: 1px solid black">
-			<cols full sm="200px 1fr">
-				<div style="background: red">img</div>
-				<hor full>
-					<box size="200px" grow>
-						<div style="background: red">img</div>
-					</box>
-					<box size="300px" expand>
-						<cen>
-							<span>text</span>
-						</cen>
-					</box>
-				</hor>
-			</cols>
-		</div>
-		<div style="height: 100px; border: 1px solid black">
-			<cols full>
-				<item></item>
-				<box span="2">
-					<item></item>
-				</box>
-				<item></item>
-				<item></item>
-				<item></item>
-				<item></item>
-				<item></item>
-			</cols>
-		</div>
-		<div>Spans</div>
-		<div style="height: 100px; border: 1px solid black">
-			<cols full xs="4">
-				<item></item>
-				<box span-lg="2">
-					<item></item>
-				</box>
-				<item></item>
-				<item></item>
-				<item></item>
-				<item></item>
-				<item></item>
-			</cols>
-		</div>
+	<div>
+		<hor>
+			<div @click="page = 'box'" style="padding: 10px; cursor: pointer">Box</div>
+			<div @click="page = 'boxChild'" style="padding: 10px; cursor: pointer">Child</div>
+			<div @click="page = 'grid'" style="padding: 10px; cursor: pointer">Grid</div>
+			<div @click="page = 'all'" style="padding: 10px; cursor: pointer">All</div>
+			<div @click="page = 'dev'" style="padding: 10px; cursor: pointer">Dev</div>
+		</hor>
 
-		<div style="height: 200px; border: 1px solid black">
-			<rows full xs="2">
-				<item></item>
-				<item></item>
-				<item></item>
-			</rows>
-		</div>
+		<AllPage v-if="page == 'all'" />
+		<ChildPage v-if="page == 'boxChild'" />
+		<BoxPage v-if="page == 'box'" />
+		<GridPage v-if="page == 'grid'" />
+		<ShortPage v-if="page == 'short'" />
+		<DevPage v-if="page == 'dev'" />
 
-		<div style="height: 100px; border: 1px solid black">
-			<div class="hor full right">
-				<item></item>
-				<item></item>
-				<item></item>
-				<item></item>
-			</div>
-		</div>
-
-		<div>Ver scroll full gap</div>
-		<div style="height: 100px; border: 1px solid black">
-			<ver scroll full gap="1em">
-				<item></item>
-				<item></item>
-				<item></item>
-				<item></item>
-				<item></item>
-				<item></item>
-				<item></item>
-				<item></item>
-				<item></item>
-			</ver>
-		</div>
-
-		<div style="height: 100px; border: 1px solid black">
-			<cols xs="1/4" full gap="10px">
-				<item></item>
-				<item></item>
-				<item></item>
-				<item></item>
-			</cols>
-		</div>
-		<div style="height: 300px; border: 1px solid black">
-			<grid xs="h / l / r / c/ f" lg="h h h / l c r / f f f | 100px 1fr 100px" gap="1em">
-				<box area="h">
-					<item />
-				</box>
-				<box area="l">
-					<item />
-				</box>
-				<box area="r">
-					<item />
-				</box>
-				<box area="c">
-					<item />
-				</box>
-				<box area="f">
-					<item />
-				</box>
-			</grid>
-		</div>
 		<breakpoint />
-	</max>
+	</div>
 </template>
 
-<script lang="ts">
-import Vue from "vue";
+<script >
+import BoxPage from "./BoxPage"
+import AllPage from "./AllPage"
+import ChildPage from "./ChildPage"
+import GridPage from "./GridPage"
+import ShortPage from "./ShortPage"
+import DevPage from "./DevPage"
 
-export default Vue.extend({
-	name: "app"
-});
+export default {
+	data() {
+		return {
+			page: "dev"
+		};
+	},
+	components: {
+		AllPage,
+		BoxPage,
+		ChildPage,
+		GridPage,
+		ShortPage,
+		DevPage
+	}
+};
 </script>
 
+<style lang="css">
+html,
+body {
+	font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen,
+		Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+</style>
