@@ -389,6 +389,14 @@ export const Box = {
 			}
 		}
 
+
+		if (has('scroll')) {
+			media({
+				flexBasis: "0px",
+				overflow: "auto"
+			})
+		}
+
 		if (has("rows")) {
 			let value = get("rows") as string;
 			value = value || "12";
