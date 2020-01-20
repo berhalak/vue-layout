@@ -2975,6 +2975,7 @@ exports.Box = {
             // allowed formats
             // a b c / a d f | 1px 1fr auto / 20px 100px // FULL
             // 1px 1fr auto / 20px 100px // without areas (fist must be integer)
+            // 12 / 20px 100px // without areas and number of columns (fist must be integer)
             // 1px 1fr auto // only columns first must be integer, no " / " sign
             // a b c / a d f // only areas
             // a b c // only areas
@@ -2994,7 +2995,13 @@ exports.Box = {
                 gridTemplateRows = value.split("|")[1].split("/")[1];
             }
             else if (value.match(/^\d.*?\//)) {
-                gridTemplateColumns = value.split("/")[0];
+                // 1px / 2px
+                // 12 / 2px auto
+                gridTemplateColumns = value.split("/")[0].trim();
+                // if this is only number of columns, generate them
+                if (gridTemplateColumns.match(/^\d+$/)) {
+                    gridTemplateColumns = `repeat(${gridTemplateColumns}, 1fr)`;
+                }
                 gridTemplateRows = value.split("/")[1];
             }
             else if (value.match(/^\d/)) {
