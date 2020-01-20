@@ -3,7 +3,7 @@
 	"version": "0.1.2",
 	"private": false,
 	"description": "vue layout components",
-	"main": "dist/vue-layout.umd.js",
+	"main": "dist/vue-layout.umd.min.js",
 	"types": "src/index.d.ts",
 	"repository": {
 		"type": "git",
@@ -26,20 +26,23 @@
 	"homepage": "https://github.com/berhalak/vue-layout#readme",
 	"scripts": {
 		"serve": "vue-cli-service serve",
-		"build": "vue-cli-service build --target lib --name vue-layout ./src/index.ts",
-		"deploy": "npm run build && npm publish --access public"
+		"build": "vue-cli-service build --target lib --name vue-layout ./src/index.ts && npm run tags",
+		"deploy": "npm run build && npm publish --access public",
+		"tags": "ts-node ./src/tags.ts"
 	},
 	"dependencies": {
 		"aphrodite": "^2.4.0",
 		"vue": "^2.6.10"
 	},
 	"devDependencies": {
+		"@types/aphrodite": "^2.0.0",
+		"@types/node": "13.1.8",
 		"@vue/cli-plugin-typescript": "^4.0.5",
 		"@vue/cli-service": "^4.0.5",
 		"node-sass": "^4.13.0",
 		"sass-loader": "^8.0.0",
+		"ts-node": "^8.6.2",
 		"typescript": "^3.7.2",
-		"@types/aphrodite": "^2.0.0",
 		"vue-template-compiler": "^2.6.10"
 	},
 	"postcss": {
@@ -49,5 +52,8 @@
 	},
 	"browserslist": [
 		"last 1 Safari versions and last 2 Chrome versions"
-	]
+	],
+	"vetur": {
+		"tags": "dist/tags.json"
+	}
 }
