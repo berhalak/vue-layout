@@ -3786,11 +3786,9 @@ const Box = {
                 gridArea: get('area')
             });
         }
-        if (has('single')) {
+        if (has('space')) {
             media({
-                " > *": {
-                    height: "100%"
-                }
+                justifyContent: "space-between"
             });
         }
         if (has('full')) {

@@ -1,6 +1,6 @@
 {
 	"name": "@berhalak/vue-layout",
-	"version": "0.1.1",
+	"version": "0.1.2",
 	"private": false,
 	"description": "vue layout components",
 	"main": "dist/vue-layout.umd.js",

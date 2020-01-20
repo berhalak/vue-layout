@@ -289,11 +289,9 @@ export const Box = {
 			})
 		}
 
-		if (has('single')) {
+		if (has('space')) {
 			media({
-				" > *": {
-					height: "100%"
-				}
+				justifyContent: "space-between"
 			})
 		}
 
