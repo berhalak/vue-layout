@@ -46,7 +46,7 @@ export {
 	Breakpoint
 }
 
-export default {
+const plugin = {
 	install(vue: typeof Vue, options: any) {
 		let prefix = '';
 		if (options && typeof options == 'string') {
@@ -58,3 +58,15 @@ export default {
 	},
 	...components
 }
+
+let GlobalVue = null;
+if (typeof window !== 'undefined') {
+	GlobalVue = window.Vue;
+} else if (typeof global !== 'undefined') {
+	GlobalVue = (global as any).Vue;
+}
+if (GlobalVue) {
+	GlobalVue.use(plugin);
+}
+
+export default plugin;

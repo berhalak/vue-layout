@@ -279,16 +279,10 @@ export const Box = {
 			}
 		}
 
-		if (has('between')) {
-			if (isHor()) {
-				media({
-					justifyContent: 'center'
-				})
-			} else {
-				media({
-					alignItems: 'center'
-				})
-			}
+		if (has('center')) {
+			media({
+				alignItems: 'center'
+			})
 		}
 
 		if (has('top')) {
@@ -307,23 +301,11 @@ export const Box = {
 
 
 		if (has('middle')) {
-			if (isHor()) {
-				media({
-					alignItems: 'center'
-				})
-			} else {
-				media({
-					justifyContent: 'center'
-				})
-			}
-		}
-
-		if (has('center')) {
 			media({
-				alignItems: 'center',
 				justifyContent: 'center'
 			})
 		}
+
 
 		if (has('bottom')) {
 

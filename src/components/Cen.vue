@@ -10,7 +10,11 @@ export default build(Box, {
 	center: {
 		type: String,
 		default: ""
-	}
+	},
+	middle: {
+		type: String,
+		default: ""
+	},
 });
 </script>
 <style lang="css">
@@ -19,6 +23,6 @@ export default build(Box, {
 	flex-direction: column;
 }
 .box-element.box-element--fill > * {
-	flex-grow : 1;
+	flex-grow: 1;
 }
 </style>
