@@ -255,6 +255,13 @@ export const Box = {
 			})
 		}
 
+		if (has('centered')) {
+			media({
+				justifyContent: 'center',
+				alignItems: 'center'
+			})
+		}
+
 		if (has('right')) {
 			if (isHor()) {
 				media({

@@ -18,6 +18,7 @@ const respons = ["size", "width", "height", "hide", "show", "col", "span", "area
     "left",
     "right",
     "center",
+    "centered",
     "cols",
     "rows",
     "pass",
