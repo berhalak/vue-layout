@@ -255,6 +255,18 @@ export const Box = {
 			})
 		}
 
+		if (has('evenly')) {
+			media({
+				justifyContent: 'space-evenly',
+			})
+		}
+
+		if (has('around')) {
+			media({
+				justifyContent: 'space-around',
+			})
+		}
+
 		if (has('centered')) {
 			media({
 				justifyContent: 'center',
