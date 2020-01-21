@@ -11,7 +11,7 @@ export default build(Box, {
 		type: String,
 		default: ""
 	},
-	middle: {
+	center: {
 		type: String,
 		default: ""
 	}

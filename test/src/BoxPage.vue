@@ -15,7 +15,7 @@
 			<item v-for="i in 2" :key="i" />
 		</box>
 		<span>between</span>
-		<box hor between class="playh">
+		<box hor middle class="playh">
 			<item v-for="i in 2" :key="i" />
 		</box>
 		<span>bottom</span>
@@ -27,36 +27,39 @@
 			<item v-for="i in 3" :key="i" />
 		</box>
 		<span>middle</span>
-		<box hor middle class="play">
+		<box hor center middle class="play">
 			<item v-for="i in 3" :key="i" />
 		</box>
 		<h3>ver</h3>
-		<box hor height="150px" class="b">
-			<box grow class="b">
+		<box hor fill height="150px" class="b">
+			<ver class="b">
 				<item v-for="i in 3" :key="i" />
-			</box>
-			<box grow left class="b">
-				left
+			</ver>
+			<ver left class="b">
 				<item v-for="i in 3" :key="i" />
-			</box>
-			<box grow between class="b">
-				middle
+			</ver>
+			<ver center class="b">
 				<item v-for="i in 3" :key="i" />
-			</box>
-			<box grow right class="b">
-				right
+			</ver>
+			<ver right class="b">
 				<item v-for="i in 3" :key="i" />
-			</box>
+			</ver>
 		</box>
-		<box hor height="150px" class="b">
-			bottom
-			<box grow bottom class="b">
+		<box hor fill height="150px" class="b">
+			<ver bottom class="b">
 				<item v-for="i in 3" :key="i" />
-			</box>center
-			<box grow center class="b">
+			</ver>
+			<ver middle class="b">
 				<item v-for="i in 3" :key="i" />
-			</box>
+			</ver>
+			<ver top class="b">
+				<item v-for="i in 3" :key="i" />
+			</ver>
 		</box>
+		<h3>cen</h3>
+		<cen class="play">
+			<item />
+		</cen>
 	</div>
 </template>
 
