@@ -23,6 +23,14 @@ for (let c of ['box', "hor", "lane", "ver", "cols", "rows", "grid", "cen", "wrap
 }
 
 
-const o = JSON.stringify(out, null, 2);
+const tags = JSON.stringify(out, null, 2);
 
-fs.writeFileSync("./dist/tags.json", o);
+
+for (const key of Object.keys(props)) {
+    props[key] = { description: "", "type": "flag" };
+}
+
+const attributes = JSON.stringify(props, null, 2);
+
+fs.writeFileSync("./tags.json", tags);
+fs.writeFileSync("./attributes.json", attributes);

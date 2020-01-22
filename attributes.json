@@ -1,0 +1,1846 @@
+{
+  "xs": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm": {
+    "description": "",
+    "type": "flag"
+  },
+  "md": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh": {
+    "description": "",
+    "type": "flag"
+  },
+  "size": {
+    "description": "",
+    "type": "flag"
+  },
+  "width": {
+    "description": "",
+    "type": "flag"
+  },
+  "height": {
+    "description": "",
+    "type": "flag"
+  },
+  "hide": {
+    "description": "",
+    "type": "flag"
+  },
+  "show": {
+    "description": "",
+    "type": "flag"
+  },
+  "col": {
+    "description": "",
+    "type": "flag"
+  },
+  "span": {
+    "description": "",
+    "type": "flag"
+  },
+  "area": {
+    "description": "",
+    "type": "flag"
+  },
+  "grow": {
+    "description": "",
+    "type": "flag"
+  },
+  "expand": {
+    "description": "",
+    "type": "flag"
+  },
+  "full": {
+    "description": "",
+    "type": "flag"
+  },
+  "shrink": {
+    "description": "",
+    "type": "flag"
+  },
+  "zero": {
+    "description": "",
+    "type": "flag"
+  },
+  "scroll": {
+    "description": "",
+    "type": "flag"
+  },
+  "max": {
+    "description": "",
+    "type": "flag"
+  },
+  "auto": {
+    "description": "",
+    "type": "flag"
+  },
+  "gap": {
+    "description": "",
+    "type": "flag"
+  },
+  "top": {
+    "description": "",
+    "type": "flag"
+  },
+  "bottom": {
+    "description": "",
+    "type": "flag"
+  },
+  "left": {
+    "description": "",
+    "type": "flag"
+  },
+  "right": {
+    "description": "",
+    "type": "flag"
+  },
+  "center": {
+    "description": "",
+    "type": "flag"
+  },
+  "centered": {
+    "description": "",
+    "type": "flag"
+  },
+  "cols": {
+    "description": "",
+    "type": "flag"
+  },
+  "rows": {
+    "description": "",
+    "type": "flag"
+  },
+  "pass": {
+    "description": "",
+    "type": "flag"
+  },
+  "fill": {
+    "description": "",
+    "type": "flag"
+  },
+  "h100": {
+    "description": "",
+    "type": "flag"
+  },
+  "w100": {
+    "description": "",
+    "type": "flag"
+  },
+  "between": {
+    "description": "",
+    "type": "flag"
+  },
+  "middle": {
+    "description": "",
+    "type": "flag"
+  },
+  "hor": {
+    "description": "",
+    "type": "flag"
+  },
+  "single": {
+    "description": "",
+    "type": "flag"
+  },
+  "grid": {
+    "description": "",
+    "type": "flag"
+  },
+  "wrap": {
+    "description": "",
+    "type": "flag"
+  },
+  "ver": {
+    "description": "",
+    "type": "flag"
+  },
+  "line": {
+    "description": "",
+    "type": "flag"
+  },
+  "around": {
+    "description": "",
+    "type": "flag"
+  },
+  "base": {
+    "description": "",
+    "type": "flag"
+  },
+  "space": {
+    "description": "",
+    "type": "flag"
+  },
+  "evenly": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:size": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:width": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:height": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:hide": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:show": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:col": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:span": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:area": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:grow": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:expand": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:full": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:shrink": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:zero": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:scroll": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:max": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:auto": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:gap": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:top": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:bottom": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:left": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:right": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:center": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:centered": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:cols": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:rows": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:pass": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:fill": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:h100": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:w100": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:between": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:middle": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:hor": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:single": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:grid": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:wrap": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:ver": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:line": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:around": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:base": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:space": {
+    "description": "",
+    "type": "flag"
+  },
+  "xs:evenly": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:size": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:width": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:height": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:hide": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:show": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:col": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:span": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:area": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:grow": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:expand": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:full": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:shrink": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:zero": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:scroll": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:max": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:auto": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:gap": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:top": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:bottom": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:left": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:right": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:center": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:centered": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:cols": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:rows": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:pass": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:fill": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:h100": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:w100": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:between": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:middle": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:hor": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:single": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:grid": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:wrap": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:ver": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:line": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:around": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:base": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:space": {
+    "description": "",
+    "type": "flag"
+  },
+  "sm:evenly": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:size": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:width": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:height": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:hide": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:show": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:col": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:span": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:area": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:grow": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:expand": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:full": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:shrink": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:zero": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:scroll": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:max": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:auto": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:gap": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:top": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:bottom": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:left": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:right": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:center": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:centered": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:cols": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:rows": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:pass": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:fill": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:h100": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:w100": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:between": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:middle": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:hor": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:single": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:grid": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:wrap": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:ver": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:line": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:around": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:base": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:space": {
+    "description": "",
+    "type": "flag"
+  },
+  "md:evenly": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:size": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:width": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:height": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:hide": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:show": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:col": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:span": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:area": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:grow": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:expand": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:full": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:shrink": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:zero": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:scroll": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:max": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:auto": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:gap": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:top": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:bottom": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:left": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:right": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:center": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:centered": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:cols": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:rows": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:pass": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:fill": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:h100": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:w100": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:between": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:middle": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:hor": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:single": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:grid": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:wrap": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:ver": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:line": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:around": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:base": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:space": {
+    "description": "",
+    "type": "flag"
+  },
+  "lg:evenly": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:size": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:width": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:height": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:hide": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:show": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:col": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:span": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:area": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:grow": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:expand": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:full": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:shrink": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:zero": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:scroll": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:max": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:auto": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:gap": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:top": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:bottom": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:left": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:right": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:center": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:centered": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:cols": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:rows": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:pass": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:fill": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:h100": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:w100": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:between": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:middle": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:hor": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:single": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:grid": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:wrap": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:ver": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:line": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:around": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:base": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:space": {
+    "description": "",
+    "type": "flag"
+  },
+  "xl:evenly": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:size": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:width": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:height": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:hide": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:show": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:col": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:span": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:area": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:grow": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:expand": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:full": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:shrink": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:zero": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:scroll": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:max": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:auto": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:gap": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:top": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:bottom": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:left": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:right": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:center": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:centered": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:cols": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:rows": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:pass": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:fill": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:h100": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:w100": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:between": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:middle": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:hor": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:single": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:grid": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:wrap": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:ver": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:line": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:around": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:base": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:space": {
+    "description": "",
+    "type": "flag"
+  },
+  "xxl:evenly": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:size": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:width": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:height": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:hide": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:show": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:col": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:span": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:area": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:grow": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:expand": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:full": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:shrink": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:zero": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:scroll": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:max": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:auto": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:gap": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:top": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:bottom": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:left": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:right": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:center": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:centered": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:cols": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:rows": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:pass": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:fill": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:h100": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:w100": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:between": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:middle": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:hor": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:single": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:grid": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:wrap": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:ver": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:line": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:around": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:base": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:space": {
+    "description": "",
+    "type": "flag"
+  },
+  "rh:evenly": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:size": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:width": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:height": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:hide": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:show": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:col": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:span": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:area": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:grow": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:expand": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:full": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:shrink": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:zero": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:scroll": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:max": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:auto": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:gap": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:top": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:bottom": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:left": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:right": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:center": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:centered": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:cols": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:rows": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:pass": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:fill": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:h100": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:w100": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:between": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:middle": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:hor": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:single": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:grid": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:wrap": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:ver": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:line": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:around": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:base": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:space": {
+    "description": "",
+    "type": "flag"
+  },
+  "fh:evenly": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:size": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:width": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:height": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:hide": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:show": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:col": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:span": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:area": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:grow": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:expand": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:full": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:shrink": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:zero": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:scroll": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:max": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:auto": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:gap": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:top": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:bottom": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:left": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:right": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:center": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:centered": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:cols": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:rows": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:pass": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:fill": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:h100": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:w100": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:between": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:middle": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:hor": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:single": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:grid": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:wrap": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:ver": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:line": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:around": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:base": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:space": {
+    "description": "",
+    "type": "flag"
+  },
+  "qh:evenly": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:size": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:width": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:height": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:hide": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:show": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:col": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:span": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:area": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:grow": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:expand": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:full": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:shrink": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:zero": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:scroll": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:max": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:auto": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:gap": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:top": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:bottom": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:left": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:right": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:center": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:centered": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:cols": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:rows": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:pass": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:fill": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:h100": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:w100": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:between": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:middle": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:hor": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:single": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:grid": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:wrap": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:ver": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:line": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:around": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:base": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:space": {
+    "description": "",
+    "type": "flag"
+  },
+  "kh:evenly": {
+    "description": "",
+    "type": "flag"
+  }
+}
