@@ -1,6 +1,6 @@
 {
 	"name": "@berhalak/vue-layout",
-	"version": "0.1.9",
+	"version": "0.1.10",
 	"private": false,
 	"description": "vue layout components",
 	"main": "dist/vue-layout.umd.min.js",
@@ -27,7 +27,7 @@
 	"homepage": "https://github.com/berhalak/vue-layout#readme",
 	"scripts": {
 		"serve": "vue-cli-service serve",
-		"build": "vue-cli-service build --target lib --name vue-layout ./src/index.ts && npm run tags",
+		"build": "vue-cli-service build --target lib --name vue-layout ./src/index.ts",
 		"deploy": "npm run build && npm publish --access public",
 		"tags": "ts-node ./src/tags.ts"
 	},
@@ -55,6 +55,7 @@
 		"last 1 Safari versions and last 2 Chrome versions"
 	],
 	"vetur": {
-		"tags": "dist/tags.json"
+		"tags": "tags.json",
+		"attributes": "attributes.json"
 	}
 }

@@ -123,6 +123,7 @@ const respons = ["size", "width", "height", "hide", "show", "col", "span", "area
     "left",
     "right",
     "center",
+    "centered",
     "cols",
     "rows",
     "pass",
@@ -1690,12 +1691,12 @@ function __importDefault(mod) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7df3d8ed-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Lane.vue?vue&type=template&id=177b6817&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7df3d8ed-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Lane.vue?vue&type=template&id=cad4ea52&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"box-element line-component",class:_vm.className,on:{"click":function($event){return _vm.$emit('click')}}},[_vm._t("default")],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Lane.vue?vue&type=template&id=177b6817&
+// CONCATENATED MODULE: ./src/components/Lane.vue?vue&type=template&id=cad4ea52&
 
 // EXTERNAL MODULE: ./src/components/core.ts
 var core = __webpack_require__("dcd2");
@@ -1714,7 +1715,7 @@ var core = __webpack_require__("dcd2");
 		type: String,
 		default: ""
 	},
-	middle: {
+	center: {
 		type: String,
 		default: ""
 	}
@@ -2103,12 +2104,12 @@ module.exports = exports;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7df3d8ed-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Cen.vue?vue&type=template&id=56a187ce&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"7df3d8ed-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Cen.vue?vue&type=template&id=432ac612&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"box-element cen-component",class:_vm.className,on:{"click":function($event){return _vm.$emit('click')}}},[_vm._t("default")],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Cen.vue?vue&type=template&id=56a187ce&
+// CONCATENATED MODULE: ./src/components/Cen.vue?vue&type=template&id=432ac612&
 
 // EXTERNAL MODULE: ./src/components/core.ts
 var core = __webpack_require__("dcd2");
@@ -2126,7 +2127,11 @@ var core = __webpack_require__("dcd2");
 	center: {
 		type: String,
 		default: ""
-	}
+	},
+	middle: {
+		type: String,
+		default: ""
+	},
 }));
 
 // CONCATENATED MODULE: ./src/components/Cen.vue?vue&type=script&lang=js&
@@ -2841,6 +2846,22 @@ exports.Box = {
                 gridGap: get("gap")
             });
         }
+        if (has('evenly')) {
+            media({
+                justifyContent: 'space-evenly',
+            });
+        }
+        if (has('around')) {
+            media({
+                justifyContent: 'space-around',
+            });
+        }
+        if (has('centered')) {
+            media({
+                justifyContent: 'center',
+                alignItems: 'center'
+            });
+        }
         if (has('right')) {
             if (isHor()) {
                 media({
@@ -2865,17 +2886,10 @@ exports.Box = {
                 });
             }
         }
-        if (has('between')) {
-            if (isHor()) {
-                media({
-                    justifyContent: 'center'
-                });
-            }
-            else {
-                media({
-                    alignItems: 'center'
-                });
-            }
+        if (has('center')) {
+            media({
+                alignItems: 'center'
+            });
         }
         if (has('top')) {
             if (isHor()) {
@@ -2890,20 +2904,7 @@ exports.Box = {
             }
         }
         if (has('middle')) {
-            if (isHor()) {
-                media({
-                    alignItems: 'center'
-                });
-            }
-            else {
-                media({
-                    justifyContent: 'center'
-                });
-            }
-        }
-        if (has('center')) {
             media({
-                alignItems: 'center',
                 justifyContent: 'center'
             });
         }
@@ -5556,7 +5557,7 @@ var es_StyleSheet = Aphrodite.StyleSheet,
 /***/ (function(module, exports, __webpack_require__) {
 
 "use strict";
-
+/* WEBPACK VAR INJECTION */(function(global) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const tslib_1 = __webpack_require__("9ab4");
 const Grid_vue_1 = tslib_1.__importDefault(__webpack_require__("454f"));
@@ -5600,7 +5601,7 @@ let components = {
     Mas: Mas_vue_1.default,
     Breakpoint: Breakpoint_vue_1.default
 };
-exports.default = Object.assign({ install(vue, options) {
+const plugin = Object.assign({ install(vue, options) {
         let prefix = '';
         if (options && typeof options == 'string') {
             prefix = options;
@@ -5609,7 +5610,19 @@ exports.default = Object.assign({ install(vue, options) {
             vue.component(prefix + key.toLowerCase(), components[key]);
         }
     } }, components);
+let GlobalVue = null;
+if (typeof window !== 'undefined') {
+    GlobalVue = window.Vue;
+}
+else if (typeof global !== 'undefined') {
+    GlobalVue = global.Vue;
+}
+if (GlobalVue) {
+    GlobalVue.use(plugin);
+}
+exports.default = plugin;
 
+/* WEBPACK VAR INJECTION */}.call(this, __webpack_require__("c8ba")))
 
 /***/ })
 
