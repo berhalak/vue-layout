@@ -15,6 +15,7 @@ $breakpoints: xs 0px 100%, sm 576px 540px, md 768px 720px, lg 992px 960px,
 
 .max-component {
 	margin: 0px auto;
+	padding: 0px 1rem;
 	@each $breakpoint in $breakpoints {
 		$name: nth($breakpoint, 1);
 		$size: nth($breakpoint, 2);
@@ -23,8 +24,12 @@ $breakpoints: xs 0px 100%, sm 576px 540px, md 768px 720px, lg 992px 960px,
 			max-width: $max;
 		}
 	}
+
+	@media only screen and (min-width: 576px) {
+		padding: 0px;
+	}
 }
 .box-element.box-element--fill > * {
-	flex-grow : 1;
+	flex-grow: 1;
 }
 </style>
