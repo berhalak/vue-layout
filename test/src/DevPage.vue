@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<h1>dev</h1>
-		<cols xs="100px..." height="300px">
+		<cols lg="100px..." bottom height="300px">
 			<item>a</item>
 			<item>a</item>
 			<item>a</item>

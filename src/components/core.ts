@@ -9,6 +9,7 @@ export type Accessor = {
 	can: (name: string) => boolean;
 	has: (b: string, vm: any, name: string) => boolean,
 	get: (b: string, vm: any, name: string) => any,
+	was: (b: string, vm: any, name: string) => boolean,
 }
 
 // hooks
@@ -24,6 +25,19 @@ function _has(breakName: string, props: any, map: Accessor | null, name: string)
 	}
 	return ok;
 }
+
+function _was(breakName: string, props: any, map: Accessor | null, name: string): boolean {
+	let ok = _has(breakName, props, map, name);
+	if (!ok && breakName) {
+		const breakArray = Object.keys(breaks);
+		const myIndex = breakArray.indexOf(breakName);
+		if (myIndex > 0) {
+			ok = _has(breakArray[myIndex - 1], props, map, name);
+		}
+	}
+	return ok;
+}
+
 function _get(breakName: string, props: any, map: Accessor | null, name: string) {
 	if (map?.can(name)) {
 		const ar = map.get(breakName, name, props);
@@ -47,6 +61,7 @@ function _media(breakName: string, klass: any, styles: any) {
 let has: (x: string) => any;
 let get: (x: string) => any;
 let media: (x: any) => any;
+let was: (x: any) => any;
 
 type Builder = { build: () => void }
 
@@ -73,6 +88,7 @@ export function classBuilder(props: any, builder: Builder, map: Accessor) {
 			has = _has.bind(null, b, vm, map);
 			get = _get.bind(null, b, vm, map);
 			media = _media.bind(null, b, result);
+			was = _was.bind(null, b, result, map);
 
 			builder.build();
 		}
@@ -107,7 +123,7 @@ export const Box = {
 
 	build() {
 		function isHor() {
-			return has("hor") || has("rows")
+			return was("hor") || was("cols")
 		}
 
 		function isVer() {

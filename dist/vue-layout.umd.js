@@ -2657,6 +2657,17 @@ function _has(breakName, props, map, name) {
     }
     return ok;
 }
+function _was(breakName, props, map, name) {
+    let ok = _has(breakName, props, map, name);
+    if (!ok && breakName) {
+        const breakArray = Object.keys(props_1.breaks);
+        const myIndex = breakArray.indexOf(breakName);
+        if (myIndex > 0) {
+            ok = _has(breakArray[myIndex - 1], props, map, name);
+        }
+    }
+    return ok;
+}
 function _get(breakName, props, map, name) {
     var _a;
     if ((_a = map) === null || _a === void 0 ? void 0 : _a.can(name)) {
@@ -2680,6 +2691,7 @@ function _media(breakName, klass, styles) {
 let has;
 let get;
 let media;
+let was;
 function comp(buildClass, def) {
     return {
         props: def ? Object.assign({}, props_1.props, def) : props_1.props,
@@ -2702,6 +2714,7 @@ function classBuilder(props, builder, map) {
             has = _has.bind(null, b, vm, map);
             get = _get.bind(null, b, vm, map);
             media = _media.bind(null, b, result);
+            was = _was.bind(null, b, result, map);
             builder.build();
         }
         return result;
@@ -2727,7 +2740,7 @@ exports.Box = {
     build() {
         var _a;
         function isHor() {
-            return has("hor") || has("rows");
+            return was("hor") || was("cols");
         }
         function isVer() {
             return !isHor();
