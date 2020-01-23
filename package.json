@@ -37,7 +37,7 @@
 	},
 	"devDependencies": {
 		"@types/aphrodite": "^2.0.0",
-		"@types/node": "13.1.8",
+		"@types/node": "10.17.0",
 		"@vue/cli-plugin-typescript": "^4.1.2",
 		"@vue/cli-service": "^4.1.2",
 		"node-sass": "^4.13.1",
