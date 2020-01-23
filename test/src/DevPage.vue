@@ -1,11 +1,11 @@
 <template>
 	<div>
 		<h1>dev</h1>
-		<lane space height="300px">
+		<cols xs="100px..." height="300px">
 			<item>a</item>
 			<item>a</item>
 			<item>a</item>
-		</lane>
+		</cols>
 	</div>
 </template>
 

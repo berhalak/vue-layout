@@ -60,6 +60,7 @@ const plugin = {
 }
 
 let GlobalVue = null;
+var global;
 if (typeof window !== 'undefined') {
 	GlobalVue = window.Vue;
 } else if (typeof global !== 'undefined') {

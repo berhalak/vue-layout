@@ -351,18 +351,38 @@ export const Box = {
 			let value = get("rows") as string;
 			value = value || "12";
 
-			if (isNumber(value)) {
+			if (value.includes("...")) {
+
+				const expand = value.includes("+");
+				const mode = value.startsWith("...") ? "auto-fill" : "auto-fit";
+				value = value.replace("...", "").replace("+", "");
+
+				if (expand) {
+					value = `repeat(${mode}, minmax(${value}, 1fr))`;
+				} else {
+					value = `repeat(${mode}, ${value})`
+				}
+
 				media({
 					display: "grid",
-					gridTemplateRows: `repeat(${value}, 1fr)`
+					gridTemplateRows: value
 				})
+
 			} else {
-				// it is bare columns
-				value = evalSizes(value);
-				media({
-					display: "grid",
-					gridTemplateRows: `${value}`
-				})
+
+				if (isNumber(value)) {
+					media({
+						display: "grid",
+						gridTemplateRows: `repeat(${value}, 1fr)`
+					})
+				} else {
+					// it is bare columns
+					value = evalSizes(value);
+					media({
+						display: "grid",
+						gridTemplateRows: `${value}`
+					})
+				}
 			}
 		}
 
@@ -370,18 +390,40 @@ export const Box = {
 			let value = get("cols") as string;
 			value = value || "12";
 
-			if (isNumber(value)) {
+			// autorepeat pattern 
+			// ...75px - repeat(auto-fit, 75px)
+			if (value.includes("...")) {
+
+				const expand = value.includes("+");
+				const mode = value.startsWith("...") ? "auto-fill" : "auto-fit";
+				value = value.replace("...", "").replace("+", "");
+
+				if (expand) {
+					value = `repeat(${mode}, minmax(${value}, 1fr))`;
+				} else {
+					value = `repeat(${mode}, ${value})`
+				}
+
 				media({
 					display: "grid",
-					gridTemplateColumns: `repeat(${value}, 1fr)`
+					gridTemplateColumns: value
 				})
+
 			} else {
-				// it is bare columns
-				value = evalSizes(value);
-				media({
-					display: "grid",
-					gridTemplateColumns: `${value}`
-				})
+
+				if (isNumber(value)) {
+					media({
+						display: "grid",
+						gridTemplateColumns: `repeat(${value}, 1fr)`
+					})
+				} else {
+					// it is bare columns
+					value = evalSizes(value);
+					media({
+						display: "grid",
+						gridTemplateColumns: `${value}`
+					})
+				}
 			}
 		}
 
