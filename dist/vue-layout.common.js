@@ -122,6 +122,7 @@ const respons = ["size", "width", "height", "hide", "show", "col", "span", "area
     "bottom",
     "left",
     "right",
+    "auto",
     "center",
     "centered",
     "cols",
@@ -2704,8 +2705,8 @@ function classBuilder(props, builder, map) {
         for (let b in props_1.breaks) {
             has = _has.bind(null, b, vm, map);
             get = _get.bind(null, b, vm, map);
+            was = _was.bind(null, b, vm, map);
             media = _media.bind(null, b, result);
-            was = _was.bind(null, b, result, map);
             builder.build();
         }
         return result;
@@ -2872,7 +2873,8 @@ exports.Box = {
         if (has('centered')) {
             media({
                 justifyContent: 'center',
-                alignItems: 'center'
+                alignItems: 'center',
+                alignContent: 'center'
             });
         }
         if (has('right')) {
@@ -2882,9 +2884,16 @@ exports.Box = {
                 });
             }
             else {
-                media({
-                    alignItems: 'flex-end'
-                });
+                if (was("rows")) {
+                    media({
+                        justifyContent: 'flex-end'
+                    });
+                }
+                else {
+                    media({
+                        alignItems: 'flex-end'
+                    });
+                }
             }
         }
         if (has('left')) {
@@ -2894,15 +2903,29 @@ exports.Box = {
                 });
             }
             else {
-                media({
-                    alignItems: 'flex-start'
-                });
+                if (was("rows")) {
+                    media({
+                        justifyContent: 'flex-start'
+                    });
+                }
+                else {
+                    media({
+                        alignItems: 'flex-start'
+                    });
+                }
             }
         }
         if (has('center')) {
-            media({
-                alignItems: 'center'
-            });
+            if (was("rows")) {
+                media({
+                    justifyContent: 'center'
+                });
+            }
+            else {
+                media({
+                    alignItems: 'center'
+                });
+            }
         }
         if (has('top')) {
             if (isHor()) {
@@ -2911,15 +2934,29 @@ exports.Box = {
                 });
             }
             else {
-                media({
-                    justifyContent: 'flex-start'
-                });
+                if (was("rows")) {
+                    media({
+                        alignContent: 'flex-start'
+                    });
+                }
+                else {
+                    media({
+                        justifyContent: 'flex-start'
+                    });
+                }
             }
         }
         if (has('middle')) {
-            media({
-                justifyContent: 'center'
-            });
+            if (was("rows")) {
+                media({
+                    alignContent: 'center'
+                });
+            }
+            else {
+                media({
+                    justifyContent: 'center'
+                });
+            }
         }
         if (has('bottom')) {
             if (isHor()) {
@@ -2928,9 +2965,16 @@ exports.Box = {
                 });
             }
             else {
-                media({
-                    justifyContent: 'flex-end'
-                });
+                if (was("rows")) {
+                    media({
+                        alignContent: 'flex-end'
+                    });
+                }
+                else {
+                    media({
+                        justifyContent: 'flex-end'
+                    });
+                }
             }
         }
         if (has('scroll')) {
@@ -2977,37 +3021,46 @@ exports.Box = {
         if (has("cols")) {
             let value = get("cols");
             value = value || "12";
-            // autorepeat pattern 
-            // ...75px - repeat(auto-fit, 75px)
-            if (value.includes("...")) {
-                const expand = value.includes("+");
-                const mode = value.startsWith("...") ? "auto-fill" : "auto-fit";
-                value = value.replace("...", "").replace("+", "");
-                if (expand) {
-                    value = `repeat(${mode}, minmax(${value}, 1fr))`;
-                }
-                else {
-                    value = `repeat(${mode}, ${value})`;
-                }
+            if (value == "auto" || has("auto")) {
                 media({
                     display: "grid",
-                    gridTemplateColumns: value
+                    gridTemplateColumns: "none",
+                    gridAutoFlow: "column"
                 });
             }
             else {
-                if (isNumber(value)) {
+                // autorepeat pattern 
+                // ...75px - repeat(auto-fit, 75px)
+                if (value.includes("...")) {
+                    const expand = value.includes("+");
+                    const mode = value.startsWith("...") ? "auto-fill" : "auto-fit";
+                    value = value.replace("...", "").replace("+", "");
+                    if (expand) {
+                        value = `repeat(${mode}, minmax(${value}, 1fr))`;
+                    }
+                    else {
+                        value = `repeat(${mode}, ${value})`;
+                    }
                     media({
                         display: "grid",
-                        gridTemplateColumns: `repeat(${value}, 1fr)`
+                        gridTemplateColumns: value
                     });
                 }
                 else {
-                    // it is bare columns
-                    value = evalSizes(value);
-                    media({
-                        display: "grid",
-                        gridTemplateColumns: `${value}`
-                    });
+                    if (isNumber(value)) {
+                        media({
+                            display: "grid",
+                            gridTemplateColumns: `repeat(${value}, 1fr)`
+                        });
+                    }
+                    else {
+                        // it is bare columns
+                        value = evalSizes(value);
+                        media({
+                            display: "grid",
+                            gridTemplateColumns: `${value}`
+                        });
+                    }
                 }
             }
         }

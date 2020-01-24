@@ -6,6 +6,7 @@
 			<div @click="page = 'grid'" style="padding: 10px; cursor: pointer">Grid</div>
 			<div @click="page = 'all'" style="padding: 10px; cursor: pointer">All</div>
 			<div @click="page = 'dev'" style="padding: 10px; cursor: pointer">Dev</div>
+			<div @click="page = 'blank'" style="padding: 10px; cursor: pointer">Blank</div>
 		</hor>
 
 		<AllPage v-if="page == 'all'" />
@@ -20,12 +21,12 @@
 </template>
 
 <script >
-import BoxPage from "./BoxPage"
-import AllPage from "./AllPage"
-import ChildPage from "./ChildPage"
-import GridPage from "./GridPage"
-import ShortPage from "./ShortPage"
-import DevPage from "./DevPage"
+import BoxPage from "./BoxPage";
+import AllPage from "./AllPage";
+import ChildPage from "./ChildPage";
+import GridPage from "./GridPage";
+import ShortPage from "./ShortPage";
+import DevPage from "./DevPage";
 
 export default {
 	data() {

@@ -1,7 +1,7 @@
 <template>
 	<div>
 		<h1>dev</h1>
-		<cols lg="100px..." bottom height="300px">
+		<cols auto height="400px" class="parent">
 			<item>a</item>
 			<item>a</item>
 			<item>a</item>
