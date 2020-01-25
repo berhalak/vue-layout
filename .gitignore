@@ -13,6 +13,7 @@ pids
 .gitpod.yml
 yarn.lock
 package-lock.json
+pnpm-lock.yaml
 
 .out/
 
