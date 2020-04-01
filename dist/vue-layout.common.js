@@ -2745,9 +2745,21 @@ exports.Box = {
             });
         }
         if (has('size')) {
-            media({
-                flexBasis: get('size')
-            });
+            let size = get('size');
+            if (size.match(/^\d+$/)) {
+                let num = parseInt(size);
+                size = `calc(100% * ${num} / 12)`;
+                media({
+                    flexBasis: size,
+                    flexShrink: 0,
+                    flexGrow: 0
+                });
+            }
+            else {
+                media({
+                    flexBasis: size
+                });
+            }
         }
         if (has('hor')) {
             media({
@@ -2927,7 +2939,8 @@ exports.Box = {
         if (has('top')) {
             if (isHor()) {
                 media({
-                    alignItems: 'flex-start'
+                    alignItems: 'flex-start',
+                    alignContent: 'flex-start'
                 });
             }
             else {

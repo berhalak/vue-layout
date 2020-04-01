@@ -1,11 +1,17 @@
 <template>
 	<div>
 		<h1>dev</h1>
-		<cols auto height="400px" class="parent">
-			<item>a</item>
-			<item>a</item>
-			<item>a</item>
-		</cols>
+		<hor wrap class="parent">
+			<box xs:size="12" xl:size="8">
+				<item>a</item>
+			</box>
+			<box size="4">
+				<item>a</item>
+			</box>
+			<box size="4">
+				<item>a</item>
+			</box>
+		</hor>
 	</div>
 </template>
 
