@@ -10,7 +10,6 @@ pids
 *.pid
 *.seed
 *.pid.lock
-.gitpod.yml
 yarn.lock
 package-lock.json
 pnpm-lock.yaml
