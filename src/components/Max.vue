@@ -10,24 +10,23 @@ export default build(Box);
 </script>
 
 <style lang="scss">
-$breakpoints: xs 0px 100%, sm 576px 540px, md 768px 720px, lg 992px 960px,
-	xl 1200px 1140px !default;
+$breakpoints: 
+    xs 100%, 
+    sm 640px, 
+    md 768px, 
+    lg 1024px,
+	xl 1280px !default;
 
 .max-component {
 	margin: 0px auto;
-	padding: 0px 1rem;
 	@each $breakpoint in $breakpoints {
 		$name: nth($breakpoint, 1);
 		$size: nth($breakpoint, 2);
-		$max: nth($breakpoint, 3);
 		@media only screen and (min-width: $size) {
-			max-width: $max;
+			max-width: $size;
 		}
 	}
 
-	@media only screen and (min-width: 576px) {
-		padding: 0px;
-	}
 }
 .box-element.box-element--fill > * {
 	flex-grow: 1;

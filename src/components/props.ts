@@ -1,9 +1,9 @@
 export const breaks = {
     xs: "0px",
-    sm: "576px",
+    sm: "640px",
     md: "768px",
-    lg: "992px",
-    xl: "1100px",
+    lg: "1024px",
+    xl: "1280px",
     xxl: "1332px",
     rh: "1632px",
     fh: "1832px",

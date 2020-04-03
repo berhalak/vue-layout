@@ -17,6 +17,10 @@
 				<item />
 			</box>
 		</box>
+        <h4>Max component</h4>
+        <max>
+            <item />
+        </max>
 	</div>
 </template>
 
