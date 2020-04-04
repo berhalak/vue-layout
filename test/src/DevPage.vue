@@ -1,17 +1,14 @@
 <template>
 	<div>
 		<h1>dev</h1>
-		<hor wrap class="parent">
-			<box xs:size="12" xl:size="8">
-				<item>a</item>
-			</box>
+		<cols class="parent" gap="1rem">
 			<box size="4">
 				<item>a</item>
 			</box>
-			<box size="4">
+			<box size="2">
 				<item>a</item>
 			</box>
-		</hor>
+		</cols>
 	</div>
 </template>
 

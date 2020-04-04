@@ -143,22 +143,6 @@ export const Box = {
 			})
 		}
 
-		if (has('size')) {
-			let size = get('size') as string;
-			if (size.match(/^\d+$/)) {
-				let num = parseInt(size);
-				size = `calc(100% * ${num} / 12)`;
-				media({
-					flexBasis: size,
-					flexShrink: 0,
-					flexGrow: 0
-				})
-			} else {
-				media({
-					flexBasis: size
-				})
-			}
-		}
 		if (has('hor')) {
 			media({
 				display: 'flex',
@@ -240,6 +224,25 @@ export const Box = {
 			media({
 				gridRowEnd: 'span ' + value
 			})
+		}
+
+
+		if (has('size')) {
+			let size = get('size') as string;
+			if (size.match(/^\d+$/)) {
+				let num = parseInt(size);
+				size = `calc(100% * ${num} / 12)`;
+				media({
+					flexBasis: size,
+					flexShrink: 0,
+					flexGrow: 0,
+					gridColumn: 'span ' + num
+				})
+			} else {
+				media({
+					flexBasis: size
+				})
+			}
 		}
 
 		if (has('span')) {
