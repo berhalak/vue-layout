@@ -104,12 +104,13 @@ module.exports =
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.props = exports.breaks = void 0;
 exports.breaks = {
     xs: "0px",
-    sm: "576px",
+    sm: "640px",
     md: "768px",
-    lg: "992px",
-    xl: "1100px",
+    lg: "1024px",
+    xl: "1280px",
     xxl: "1332px",
     rh: "1632px",
     fh: "1832px",
@@ -179,7 +180,7 @@ var update = add("2ccd7004", content, true, {"sourceMap":false,"shadowMode":fals
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1be533cb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Hor.vue?vue&type=template&id=a9363936&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"99f49a2c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Hor.vue?vue&type=template&id=a9363936&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"box-element hor-component",class:_vm.className,on:{"click":function($event){return _vm.$emit('click')}}},[_vm._t("default")],2)}
 var staticRenderFns = []
 
@@ -487,11 +488,12 @@ rawAsap.makeRequestCallFromTimer = makeRequestCallFromTimer;
 // This file is imported into lib/wc client bundles.
 
 if (typeof window !== 'undefined') {
-  if (false) {}
+  var currentScript = window.document.currentScript
+  if (false) { var getCurrentScript; }
 
-  var i
-  if ((i = window.document.currentScript) && (i = i.src.match(/(.+\/)[^/]+\.js(\?.*)?$/))) {
-    __webpack_require__.p = i[1] // eslint-disable-line
+  var src = currentScript && currentScript.src.match(/(.+\/)[^/]+\.js(\?.*)?$/)
+  if (src) {
+    __webpack_require__.p = src[1] // eslint-disable-line
   }
 }
 
@@ -508,7 +510,7 @@ if (typeof window !== 'undefined') {
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("24fb");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, ".max-component{margin:0 auto;padding:0 1rem}@media only screen and (min-width:0px){.max-component{max-width:100%}}@media only screen and (min-width:576px){.max-component{max-width:540px}}@media only screen and (min-width:768px){.max-component{max-width:720px}}@media only screen and (min-width:992px){.max-component{max-width:960px}}@media only screen and (min-width:1200px){.max-component{max-width:1140px}}@media only screen and (min-width:576px){.max-component{padding:0}}.box-element.box-element--fill>*{flex-grow:1}", ""]);
+exports.push([module.i, ".max-component{margin:0 auto}@media only screen and (min-width:100%){.max-component{max-width:100%}}@media only screen and (min-width:640px){.max-component{max-width:640px}}@media only screen and (min-width:768px){.max-component{max-width:768px}}@media only screen and (min-width:1024px){.max-component{max-width:1024px}}@media only screen and (min-width:1280px){.max-component{max-width:1280px}}.box-element.box-element--fill>*{flex-grow:1}", ""]);
 // Exports
 module.exports = exports;
 
@@ -815,7 +817,12 @@ function normalizeComponent (
     options._ssrRegister = hook
   } else if (injectStyles) {
     hook = shadowMode
-      ? function () { injectStyles.call(this, this.$root.$options.shadowRoot) }
+      ? function () {
+        injectStyles.call(
+          this,
+          (options.functional ? this.parent : this).$root.$options.shadowRoot
+        )
+      }
       : injectStyles
   }
 
@@ -824,7 +831,7 @@ function normalizeComponent (
       // for template-only hot-reload because in that case the render fn doesn't
       // go through the normalizer
       options._injectStyles = hook
-      // register for functioal component in vue file
+      // register for functional component in vue file
       var originalRender = options.render
       options.render = function renderWithStyleInjection (h, context) {
         hook.call(context)
@@ -926,7 +933,7 @@ var update = add("1ea123be", content, true, {"sourceMap":false,"shadowMode":fals
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1be533cb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Grid.vue?vue&type=template&id=7b7db889&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"99f49a2c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Grid.vue?vue&type=template&id=7b7db889&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"box-element grid-component",class:_vm.className,on:{"click":function($event){return _vm.$emit('click')}}},[_vm._t("default")],2)}
 var staticRenderFns = []
 
@@ -1302,7 +1309,7 @@ var update = add("0c6cc19e", content, true, {"sourceMap":false,"shadowMode":fals
 var ___CSS_LOADER_API_IMPORT___ = __webpack_require__("24fb");
 exports = ___CSS_LOADER_API_IMPORT___(false);
 // Module
-exports.push([module.i, "#breakpoint{position:fixed;bottom:0;right:0;color:#000;font-size:12px;padding-right:2px;padding-bottom:2px;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif}@media only screen and (min-width:0px){#breakpoint:after{content:\"xs\"}}@media only screen and (min-width:576px){#breakpoint:after{content:\"sm\"}}@media only screen and (min-width:768px){#breakpoint:after{content:\"md\"}}@media only screen and (min-width:992px){#breakpoint:after{content:\"lg\"}}@media only screen and (min-width:1100px){#breakpoint:after{content:\"xl\"}}@media only screen and (min-width:1332px){#breakpoint:after{content:\"xxl\"}}@media only screen and (min-width:1632px){#breakpoint:after{content:\"rh\"}}@media only screen and (min-width:1832px){#breakpoint:after{content:\"fh\"}}@media only screen and (min-width:2232px){#breakpoint:after{content:\"qh\"}}@media only screen and (min-width:3032px){#breakpoint:after{content:\"kh\"}}", ""]);
+exports.push([module.i, "#breakpoint{position:fixed;bottom:0;right:0;color:#000;font-size:12px;padding-right:2px;padding-bottom:2px;font-family:Segoe UI,Tahoma,Geneva,Verdana,sans-serif}@media only screen and (min-width:100%){#breakpoint:after{content:\"xs\"}}@media only screen and (min-width:640px){#breakpoint:after{content:\"sm\"}}@media only screen and (min-width:768px){#breakpoint:after{content:\"md\"}}@media only screen and (min-width:1024px){#breakpoint:after{content:\"lg\"}}@media only screen and (min-width:1280px){#breakpoint:after{content:\"xl\"}}@media only screen and (min-width:1332px){#breakpoint:after{content:\"xxl\"}}@media only screen and (min-width:1632px){#breakpoint:after{content:\"rh\"}}@media only screen and (min-width:1832px){#breakpoint:after{content:\"fh\"}}@media only screen and (min-width:2232px){#breakpoint:after{content:\"qh\"}}@media only screen and (min-width:3032px){#breakpoint:after{content:\"kh\"}}", ""]);
 // Exports
 module.exports = exports;
 
@@ -1344,7 +1351,7 @@ module.exports = exports;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1be533cb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Ver.vue?vue&type=template&id=07110590&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"99f49a2c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Ver.vue?vue&type=template&id=07110590&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"box-element ver-component",class:_vm.className,on:{"click":function($event){return _vm.$emit('click')}}},[_vm._t("default")],2)}
 var staticRenderFns = []
 
@@ -1692,7 +1699,7 @@ function __importDefault(mod) {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1be533cb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Lane.vue?vue&type=template&id=cad4ea52&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"99f49a2c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Lane.vue?vue&type=template&id=cad4ea52&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"box-element line-component",class:_vm.className,on:{"click":function($event){return _vm.$emit('click')}}},[_vm._t("default")],2)}
 var staticRenderFns = []
 
@@ -1804,7 +1811,7 @@ var update = add("a95ca6c4", content, true, {"sourceMap":false,"shadowMode":fals
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1be533cb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Fill.vue?vue&type=template&id=a1efdaf2&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"99f49a2c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Fill.vue?vue&type=template&id=a1efdaf2&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"box-element fill-component",class:_vm.className,on:{"click":function($event){return _vm.$emit('click')}}},[_vm._t("default")],2)}
 var staticRenderFns = []
 
@@ -1868,12 +1875,12 @@ var component = Object(componentNormalizer["a" /* default */])(
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1be533cb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Max.vue?vue&type=template&id=e97350ae&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"99f49a2c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Max.vue?vue&type=template&id=abce00b0&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"box-element max-component",class:_vm.className,on:{"click":function($event){return _vm.$emit('click')}}},[_vm._t("default")],2)}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Max.vue?vue&type=template&id=e97350ae&
+// CONCATENATED MODULE: ./src/components/Max.vue?vue&type=template&id=abce00b0&
 
 // EXTERNAL MODULE: ./src/components/core.ts
 var core = __webpack_require__("dcd2");
@@ -1938,7 +1945,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1be533cb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Rows.vue?vue&type=template&id=f64ec250&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"99f49a2c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Rows.vue?vue&type=template&id=f64ec250&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"box-element rows-component",class:_vm.className,on:{"click":function($event){return _vm.$emit('click')}}},[_vm._t("default")],2)}
 var staticRenderFns = []
 
@@ -2105,7 +2112,7 @@ module.exports = exports;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1be533cb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Cen.vue?vue&type=template&id=432ac612&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"99f49a2c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Cen.vue?vue&type=template&id=432ac612&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"box-element cen-component",class:_vm.className,on:{"click":function($event){return _vm.$emit('click')}}},[_vm._t("default")],2)}
 var staticRenderFns = []
 
@@ -2173,7 +2180,7 @@ var component = Object(componentNormalizer["a" /* default */])(
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1be533cb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Mas.vue?vue&type=template&id=5433895e&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"99f49a2c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Mas.vue?vue&type=template&id=5433895e&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('Masonry',{staticClass:"mas-component",class:_vm.klass,style:(_vm.style),attrs:{"cols":_vm.mcols,"gutter":_vm.mgutter}},[_vm._t("default")],2)}
 var staticRenderFns = []
 
@@ -2629,6 +2636,7 @@ module.exports = exports;
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Box = exports.build = exports.classBuilder = void 0;
 const aphrodite_1 = __webpack_require__("ffb2");
 const props_1 = __webpack_require__("0abf");
 function isOn(value) {
@@ -2744,23 +2752,6 @@ exports.Box = {
                 height: "100%"
             });
         }
-        if (has('size')) {
-            let size = get('size');
-            if (size.match(/^\d+$/)) {
-                let num = parseInt(size);
-                size = `calc(100% * ${num} / 12)`;
-                media({
-                    flexBasis: size,
-                    flexShrink: 0,
-                    flexGrow: 0
-                });
-            }
-            else {
-                media({
-                    flexBasis: size
-                });
-            }
-        }
         if (has('hor')) {
             media({
                 display: 'flex',
@@ -2834,6 +2825,24 @@ exports.Box = {
             media({
                 gridRowEnd: 'span ' + value
             });
+        }
+        if (has('size')) {
+            let size = get('size');
+            if (size.match(/^\d+$/)) {
+                let num = parseInt(size);
+                size = `calc(100% * ${num} / 12)`;
+                media({
+                    flexBasis: size,
+                    flexShrink: 0,
+                    flexGrow: 0,
+                    gridColumn: 'span ' + num
+                });
+            }
+            else {
+                media({
+                    flexBasis: size
+                });
+            }
         }
         if (has('span')) {
             let value = get('span');
@@ -3145,7 +3154,7 @@ exports.Box = {
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1be533cb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Cols.vue?vue&type=template&id=3a5b3810&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"99f49a2c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Cols.vue?vue&type=template&id=3a5b3810&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"box-element cols-component",class:_vm.className,on:{"click":function($event){return _vm.$emit('click')}}},[_vm._t("default")],2)}
 var staticRenderFns = []
 
@@ -3295,7 +3304,7 @@ module.exports = hash;
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1be533cb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Box.vue?vue&type=template&id=694fa51d&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"99f49a2c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Box.vue?vue&type=template&id=694fa51d&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{staticClass:"box-element box-component",class:_vm.className,on:{"click":function($event){return _vm.$emit('click')}}},[_vm._t("default")],2)}
 var staticRenderFns = []
 
@@ -3371,12 +3380,12 @@ __webpack_require__.r(__webpack_exports__);
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 
-// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"1be533cb-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Breakpoint.vue?vue&type=template&id=27c33043&
+// CONCATENATED MODULE: ./node_modules/cache-loader/dist/cjs.js?{"cacheDirectory":"node_modules/.cache/vue-loader","cacheIdentifier":"99f49a2c-vue-loader-template"}!./node_modules/vue-loader/lib/loaders/templateLoader.js??vue-loader-options!./node_modules/cache-loader/dist/cjs.js??ref--0-0!./node_modules/vue-loader/lib??vue-loader-options!./src/components/Breakpoint.vue?vue&type=template&id=60b1ec0d&
 var render = function () {var _vm=this;var _h=_vm.$createElement;var _c=_vm._self._c||_h;return _c('div',{attrs:{"id":"breakpoint"}})}
 var staticRenderFns = []
 
 
-// CONCATENATED MODULE: ./src/components/Breakpoint.vue?vue&type=template&id=27c33043&
+// CONCATENATED MODULE: ./src/components/Breakpoint.vue?vue&type=template&id=60b1ec0d&
 
 // EXTERNAL MODULE: ./src/components/Breakpoint.vue?vue&type=style&index=0&lang=scss&
 var Breakpointvue_type_style_index_0_lang_scss_ = __webpack_require__("8eb0");
@@ -5671,6 +5680,7 @@ var es_StyleSheet = Aphrodite.StyleSheet,
 "use strict";
 
 Object.defineProperty(exports, "__esModule", { value: true });
+exports.Breakpoint = exports.Mas = exports.Wrap = exports.Lane = exports.Fill = exports.Ver = exports.Max = exports.Hor = exports.Cen = exports.Box = exports.Rows = exports.Cols = exports.Grid = void 0;
 const tslib_1 = __webpack_require__("9ab4");
 const Grid_vue_1 = tslib_1.__importDefault(__webpack_require__("454f"));
 exports.Grid = Grid_vue_1.default;

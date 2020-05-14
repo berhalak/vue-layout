@@ -1,6 +1,6 @@
 {
 	"name": "@berhalak/vue-layout",
-	"version": "0.1.18",
+	"version": "0.1.19",
 	"private": false,
 	"description": "vue layout components",
 	"main": "dist/vue-layout.umd.min.js",
@@ -29,7 +29,8 @@
 		"serve": "vue-cli-service serve",
 		"build": "vue-cli-service build --target lib --name vue-layout ./src/index.ts",
 		"deploy": "npm run build && npm publish --access public",
-		"tags": "ts-node ./src/tags.ts"
+		"tags": "ts-node ./src/tags.ts",
+		"update": "ncu -x @types/node"
 	},
 	"dependencies": {
 		"aphrodite": "^2.4.0",
@@ -38,12 +39,12 @@
 	"devDependencies": {
 		"@types/aphrodite": "^2.0.0",
 		"@types/node": "13.9.8",
-		"@vue/cli-plugin-typescript": "^4.2.3",
-		"@vue/cli-service": "^4.2.3",
-		"node-sass": "^4.13.1",
+		"@vue/cli-plugin-typescript": "^4.3.1",
+		"@vue/cli-service": "^4.3.1",
+		"node-sass": "^4.14.1",
 		"sass-loader": "^8.0.2",
-		"ts-node": "^8.8.1",
-		"typescript": "^3.8.3",
+		"ts-node": "^8.10.1",
+		"typescript": "^3.9.2",
 		"vue-template-compiler": "^2.6.11"
 	},
 	"postcss": {
