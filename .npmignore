@@ -11,3 +11,5 @@ dist/vue-layout.umd.js*
 tsconfig.json
 vue.config.js
 **/*.tgz
+.github/
+.gitpod*
