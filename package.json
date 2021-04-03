@@ -1,6 +1,6 @@
 {
 	"name": "@berhalak/vue-layout",
-	"version": "0.1.20",
+	"version": "0.1.21",
 	"private": false,
 	"description": "vue layout components",
 	"main": "dist/vue-layout.umd.min.js",
@@ -34,18 +34,18 @@
 	},
 	"dependencies": {
 		"aphrodite": "^2.4.0",
-		"vue": "^2.6.11"
+		"vue": "^2.6.12"
 	},
 	"devDependencies": {
 		"@types/aphrodite": "^2.0.0",
-		"@types/node": "13.9.8",
-		"@vue/cli-plugin-typescript": "^4.3.1",
-		"@vue/cli-service": "^4.3.1",
+		"@types/node": "13.13.48",
+		"@vue/cli-plugin-typescript": "^4.5.12",
+		"@vue/cli-service": "^4.5.12",
 		"node-sass": "^4.14.1",
 		"sass-loader": "^8.0.2",
-		"ts-node": "^8.10.1",
-		"typescript": "^3.9.2",
-		"vue-template-compiler": "^2.6.11"
+		"ts-node": "^8.10.2",
+		"typescript": "^4.2.3",
+		"vue-template-compiler": "^2.6.12"
 	},
 	"postcss": {
 		"plugins": {
